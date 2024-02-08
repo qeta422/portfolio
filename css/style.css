@@ -62,11 +62,19 @@ body {
   padding: 1rem;
   color: #028a0f;
 }
+.nav__list li:hover {
+  color: #03AC13;
+  transition: 0.5s;
+}
 .nav__link {
   color: #BDBDBD;
   font-family: "Fira Code", monospace;
   font-weight: 400;
   font-size: 14px;
+}
+.nav__link:hover {
+  color: #E0E0E0;
+  transition: 0.5s;
 }
 .nav__right {
   width: 40%;
@@ -81,6 +89,12 @@ body {
   font-family: "Fira Code", monospace;
   float: right;
   margin-right: 1rem;
+}
+.nav__right .btn:hover {
+  background-color: #024b0a;
+  border: none;
+  color: #E0E0E0;
+  transition: 1s;
 }
 
 /*# sourceMappingURL=style.css.map */

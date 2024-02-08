@@ -34,6 +34,11 @@
             padding: 1rem;
             color: $color-primary;
         }
+
+        li:hover {
+            color: $color-primary-light;
+            transition: .5s;
+        }
     }
 
     &__link {
@@ -41,6 +46,11 @@
         font-family: $font-family-small;
         font-weight: 400;
         font-size: 14px;
+
+        &:hover  {
+            color: $color-lighter2;
+            transition: .5s;
+        }
     }
 
     &__right {
@@ -55,6 +65,13 @@
             font-family: $font-family-small;
             float: right;
             margin-right: 1rem;
+
+            &:hover {
+                background-color: $color-primary-dark;
+                border: none;
+                color: $color-lighter2;
+                transition: 1s;
+            }
         }
     }
 }
