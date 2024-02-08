@@ -15,17 +15,25 @@
 .about {
     display: flex;
     justify-content: space-between;
-    top: 200rem;
+    position: relative;
+    top: 50rem;
 
     &__photo {
         width: 50%;
 
         img {
-            width: 50%;
+            width: 100%;
         }
     }
 
     &__text {
-        width: 50%;
+        width: 40%;
+        position: absolute;
+        top: 20rem;
+        left: 50rem;
+
+
+        animation-name: moveInRight;
+        animation-duration: 2s;
     }
 }
