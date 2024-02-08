@@ -33,6 +33,8 @@
         li {
             padding: 1rem;
             color: $color-primary;
+            font-family: $font-family-small;
+            font-size: 13px;
         }
 
         li:hover {
@@ -55,23 +57,16 @@
 
     &__right {
         width: 40%;
-        .btn {
-            padding: .5rem 1rem;
-            border: 1px solid $color-primary;
-            border-radius: 2rem;
-            background-color: transparent;
-            justify-content: end;
-            color: $color-lighter;
-            font-family: $font-family-small;
-            float: right;
-            margin-right: 1rem;
+    }
 
-            &:hover {
-                background-color: $color-primary-dark;
-                border: none;
-                color: $color-lighter2;
-                transition: 1s;
-            }
+    &__btn {
+        float: right;
+        margin-right: 1rem;
+
+        &:hover {
+            background-color: $color-primary-dark;
+            border: none;
+            transition: 1s;
         }
     }
 }

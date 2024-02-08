@@ -28,6 +28,57 @@ body {
   box-sizing: border-box;
 }
 
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  80% {
+    transform: translateX(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+.heading {
+  font-size: 3.5rem;
+  color: #E0E0E0;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+}
+
+.paragraph {
+  font-size: 1rem;
+  color: #028a0f;
+  font-family: "Fira Code", monospace;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.heading-small {
+  font-size: 1rem;
+  color: #BDBDBD;
+  font-family: "Fira Code", monospace;
+  font-weight: 400;
+  margin: 2rem 0;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border: 1px solid #028a0f;
+  border-radius: 2rem;
+  background-color: transparent;
+  justify-content: end;
+  color: #BDBDBD;
+  font-family: "Fira Code", monospace;
+  cursor: pointer;
+}
+.btn:hover {
+  color: #E0E0E0;
+  transition: 1s;
+}
+
 .header {
   width: 100%;
   position: relative;
@@ -61,6 +112,8 @@ body {
 .nav__list li {
   padding: 1rem;
   color: #028a0f;
+  font-family: "Fira Code", monospace;
+  font-size: 13px;
 }
 .nav__list li:hover {
   color: #03AC13;
@@ -79,22 +132,26 @@ body {
 .nav__right {
   width: 40%;
 }
-.nav__right .btn {
-  padding: 0.5rem 1rem;
-  border: 1px solid #028a0f;
-  border-radius: 2rem;
-  background-color: transparent;
-  justify-content: end;
-  color: #BDBDBD;
-  font-family: "Fira Code", monospace;
+.nav__btn {
   float: right;
   margin-right: 1rem;
 }
-.nav__right .btn:hover {
+.nav__btn:hover {
   background-color: #024b0a;
   border: none;
-  color: #E0E0E0;
   transition: 1s;
+}
+
+.banner {
+  width: 100%;
+  position: relative;
+}
+.banner__text {
+  position: absolute;
+  top: 20rem;
+  left: 15rem;
+  animation-name: moveInLeft;
+  animation-duration: 2s;
 }
 
 /*# sourceMappingURL=style.css.map */

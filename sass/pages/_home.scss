@@ -1,0 +1,13 @@
+.banner {
+    width: 100%;
+    position: relative;
+
+    &__text {
+        position: absolute;
+        top: 20rem;
+        left: 15rem;
+
+        animation-name: moveInLeft;
+        animation-duration: 2s;
+    }
+}

@@ -1,0 +1,23 @@
+.heading {
+    font-size: 3.5rem;
+    color: $color-lighter2;
+    font-family: $font-family-big;
+    font-weight: 700;
+}
+
+.paragraph {
+    font-size: 1rem;
+    color: $color-primary;
+    font-family: $font-family-small;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.heading-small {
+    font-size: 1rem;
+    color: $color-lighter;
+    font-family: $font-family-small;
+    font-weight: 400;
+    margin: 2rem 0;
+}
+
