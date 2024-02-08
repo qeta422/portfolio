@@ -4,6 +4,22 @@ $color-light:  #757575;
 $color-lighter: #BDBDBD;
 $color-lighter2: #E0E0E0;
 
+$color-primaryy: #427D9D;
+$color-light:  #9BBEC8;
+$color-dark: #164863;
+
+$color-secondary-light: #ffb900;
+$color-secondary-dark: #ff7730;
+
+$color-tertiary-light: #7ed56f;
+$color-tertiary-dark: #28b485;
+
+$color-grey-light-1: #f7f7f7;
+$color-grey-light-2: rgb(226, 222, 222);
+
+$color-grey-dark: #5c5b5b;
+$color-grey-dark-2: #414141;
+
 
 $color-primary: #028a0f;
 $color-primary-light: #03AC13;
@@ -13,6 +29,12 @@ $color-primary-dark: #024b0a;
 $color-white: #ffffff;
 $color-black: #000000;
 
-
+//font
 $font-family-small: "Fira Code", monospace;
 $font-family-big: "Raleway", sans-serif;
+
+//grid
+$grid-width: 90rem;
+$gutter-vertical: 9rem;
+$gutter-vertical-small: 6rem;
+$gutter-horisontal: 6rem;

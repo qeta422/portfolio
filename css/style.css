@@ -90,7 +90,6 @@ body {
   border: 1px solid #028a0f;
   border-radius: 2rem;
   background-color: transparent;
-  justify-content: end;
   color: #BDBDBD;
   font-family: "Fira Code", monospace;
   cursor: pointer;
@@ -98,6 +97,183 @@ body {
 .btn:hover {
   color: #E0E0E0;
   transition: 1s;
+}
+
+.btn--white {
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  background-color: #ffffff;
+  color: #BDBDBD;
+  font-family: "Fira Code", monospace;
+  cursor: pointer;
+}
+.btn--white:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  border: none;
+  color: #164863;
+}
+.btn--white:active {
+  transform: translateY(-0.1rem);
+}
+.btn--white:link {
+  padding: 1rem 2rem;
+  display: inline-block;
+  transition: all 0.2s;
+}
+.btn--white:visited {
+  padding: 1rem 2rem;
+  display: inline-block;
+  transition: all 0.2s;
+}
+
+.card {
+  perspective: 170rem;
+  -moz-perspective: 170rem;
+  position: relative;
+  height: 40rem;
+}
+.card__side {
+  color: #ffffff;
+  font-size: 1.5rem;
+  height: 30rem;
+  transition: all 1s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backface-visibility: hidden;
+  border-radius: 3px;
+  box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.15);
+}
+.card__side--front {
+  background-color: #ffffff;
+}
+.card__side--back {
+  transform: rotateY(180deg);
+}
+.card__side--back-1 {
+  background-image: linear-gradient(to right bottom, #ffb900, #ff7730);
+}
+.card__side--back-2 {
+  background-image: linear-gradient(to right bottom, #7ed56f, #28b485);
+}
+.card__side--back-3 {
+  background-image: linear-gradient(to right bottom, #9BBEC8, #427D9D);
+}
+.card:hover .card__side--front {
+  transform: rotateY(-180deg);
+}
+.card:hover .card__side--back {
+  transform: rotateY(0);
+}
+.card__picture {
+  background-size: cover;
+  height: 12rem;
+  background-blend-mode: screen;
+}
+.card__picture--1 {
+  background-image: url(../img/flip1.jpg);
+}
+.card__picture--2 {
+  background-image: url(../img/flip3.jpg);
+}
+.card__picture--3 {
+  background-image: url(../img/flip2.jpg);
+}
+.card__heading {
+  font-size: 1.3rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: right;
+  color: #ffffff;
+  position: absolute;
+  top: 9rem;
+  right: 1rem;
+  width: 75%;
+}
+.card__heading-span {
+  padding: 0.3rem 0.7rem;
+  -webkit-box-decoration-break: clone;
+}
+.card__heading-span--1 {
+  background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.5), rgba(255, 119, 48, 0.5));
+}
+.card__heading-span--2 {
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.5), rgba(40, 180, 133, 0.5));
+}
+.card__heading-span--3 {
+  background-image: linear-gradient(to right bottom, rgba(155, 190, 200, 0.5), rgba(66, 125, 157, 0.5));
+}
+.card__details {
+  padding: 2.5rem;
+}
+.card__details ul {
+  list-style-type: none;
+  width: 80%;
+  margin: 0 auto;
+}
+.card__details ul li {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  color: #5c5b5b;
+}
+.card__details ul li:not(:last-child) {
+  border-bottom: 1px solid rgb(226, 222, 222);
+}
+.card__cta {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  text-align: center;
+  font-size: 1rem;
+}
+.card__price-box {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.card__price-name {
+  text-transform: uppercase;
+}
+@media (max-width: 56.25em) {
+  .card {
+    height: auto;
+    border-radius: 3px;
+    background-color: #ffffff;
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.15);
+  }
+  .card__side {
+    height: auto;
+    position: relative;
+    box-shadow: none;
+  }
+  .card__side--back {
+    transform: rotateY(0);
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+  }
+  .card:hover .card__side--front {
+    transform: rotateY(0);
+  }
+  .card__details {
+    padding: 2rem 3rem;
+  }
+  .card__cta {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translate(0);
+    width: 100%;
+    padding: 7rem 4rem 4rem 4rem;
+  }
+  .card__price-box {
+    margin-bottom: 3rem;
+  }
+  .card__price-value {
+    font-size: 5rem;
+  }
 }
 
 .header {
@@ -163,6 +339,64 @@ body {
   transition: 1s;
 }
 
+.row {
+  max-width: 90rem;
+  margin: 0 auto;
+}
+.row:not(:last-child) {
+  margin-bottom: 9rem;
+}
+@media (max-width: 56.25em) {
+  .row:not(:last-child) {
+    margin-bottom: 9rem;
+  }
+}
+@media (max-width: 56.25em) {
+  .row {
+    max-width: 40rem;
+  }
+}
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.row [class^=col-] {
+  float: left;
+}
+.row [class^=col-]:not(:last-child) {
+  margin-right: 6rem;
+}
+@media (max-width: 56.25em) {
+  .row [class^=col-]:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 9rem;
+  }
+}
+@media (max-width: 56.25em) {
+  .row [class^=col-] {
+    width: 100% !important;
+  }
+}
+.row .col-1-of-2 {
+  width: calc((90rem - 6rem) / 2);
+}
+.row .col-1-of-3 {
+  width: calc((90rem - 2 * 6rem) / 3);
+}
+.row .col-1-of-4 {
+  width: calc((90rem - 3 * 6rem) / 4);
+}
+.row .col-2-of-3 {
+  width: calc(2 * (90rem - 2 * 6rem) / 3 + 6rem);
+}
+.row .col-2-of-4 {
+  width: calc(2 * (90rem - 3 * 6rem) / 4 + 6rem);
+}
+.row .col-3-of-4 {
+  width: calc(3 * (90rem - 3 * 6rem) / 4 + 12rem);
+}
+
 .banner {
   width: 100%;
   position: relative;
@@ -194,6 +428,23 @@ body {
   left: 50rem;
   animation-name: moveInRight;
   animation-duration: 2s;
+}
+
+.education {
+  position: relative;
+  top: 55rem;
+  text-align: center;
+}
+
+@media (max-width: 56.25em) {
+  .tours {
+    padding: 10rem 0;
+  }
+}
+
+.projects {
+  position: relative;
+  top: 150rem;
 }
 
 /*# sourceMappingURL=style.css.map */

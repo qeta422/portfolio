@@ -37,3 +37,21 @@
         animation-duration: 2s;
     }
 }
+
+.education {
+    position: relative;
+    top: 55rem;
+    text-align: center;
+}
+
+.tours {
+
+    @include respond(tab-port) {
+        padding: 10rem 0;
+    }
+}
+
+.projects {
+    position: relative;
+    top: 150rem;
+}
