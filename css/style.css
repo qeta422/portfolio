@@ -1,5 +1,86 @@
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
+
 body {
   background-color: #212121;
+  box-sizing: border-box;
+}
+
+.header {
+  width: 100%;
+  position: relative;
+}
+.header .sticky {
+  backdrop-filter: blur(30px);
+  box-shadow: 3px 3px 50px rgba(0, 0, 0, 0.3);
+}
+
+.nav {
+  width: 50%;
+  position: fixed;
+  z-index: 10;
+  transition: 0.6s;
+  border-radius: 2rem;
+  display: flex;
+  left: 50%;
+  top: 2rem;
+  transform: translateX(-50%);
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(30px);
+  box-shadow: 3px 3px 50px rgba(0, 0, 0, 0.3);
+}
+.nav__left {
+  width: 60%;
+}
+.nav__list {
+  display: flex;
+}
+.nav__list li {
+  padding: 1rem;
+  color: #028a0f;
+}
+.nav__link {
+  color: #BDBDBD;
+  font-family: "Fira Code", monospace;
+  font-weight: 400;
+  font-size: 14px;
+}
+.nav__right {
+  width: 40%;
+}
+.nav__right .btn {
+  padding: 0.5rem 1rem;
+  border: 1px solid #028a0f;
+  border-radius: 2rem;
+  background-color: transparent;
+  justify-content: end;
+  color: #BDBDBD;
+  font-family: "Fira Code", monospace;
+  float: right;
+  margin-right: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */
