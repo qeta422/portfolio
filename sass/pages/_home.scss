@@ -11,3 +11,21 @@
         animation-duration: 2s;
     }
 }
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    top: 200rem;
+
+    &__photo {
+        width: 50%;
+
+        img {
+            width: 50%;
+        }
+    }
+
+    &__text {
+        width: 50%;
+    }
+}

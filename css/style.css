@@ -154,4 +154,19 @@ body {
   animation-duration: 2s;
 }
 
+.about {
+  display: flex;
+  justify-content: space-between;
+  top: 200rem;
+}
+.about__photo {
+  width: 50%;
+}
+.about__photo img {
+  width: 50%;
+}
+.about__text {
+  width: 50%;
+}
+
 /*# sourceMappingURL=style.css.map */
