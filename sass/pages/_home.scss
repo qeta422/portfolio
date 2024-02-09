@@ -115,3 +115,23 @@
         padding: 8rem 0;
     }
 }
+.footer {
+    width: 100%;
+    position: relative;
+    top: 155rem;
+    hr {
+        width: 50%;
+        height: 1px;
+        border: none;
+        background-image: radial-gradient( $color-light, $color-dark);
+        -webkit-background-clip: line;
+        color: transparent;
+    }
+
+    &__heading-small {
+        padding: 1rem 0 2.5rem 0;
+        text-align: center;
+        font-size: .9rem;
+        font-family: $font-family-small;
+    }
+}

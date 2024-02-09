@@ -532,4 +532,24 @@ body {
   }
 }
 
+.footer {
+  width: 100%;
+  position: relative;
+  top: 155rem;
+}
+.footer hr {
+  width: 50%;
+  height: 1px;
+  border: none;
+  background-image: radial-gradient(#757575, #212121);
+  -webkit-background-clip: line;
+  color: transparent;
+}
+.footer__heading-small {
+  padding: 1rem 0 2.5rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+  font-family: "Fira Code", monospace;
+}
+
 /*# sourceMappingURL=style.css.map */
