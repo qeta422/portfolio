@@ -18,7 +18,7 @@
         box-shadow: 0 1rem 4rem rgba($color-black, .15);
 
         &--front {
-            background-color: $color-white;
+            background-color: $color-grey-dark-2;
         }
 
         &--back {
@@ -119,6 +119,7 @@
         text-align: center;
         margin-bottom: 2.5rem;
         font-family: $font-family-small;
+        color: $color-dark;
     }
 
     &__price-name {

@@ -66,14 +66,52 @@
     top: 150rem;
     width: 100%;
 
+    &__text {
+        text-align: center;
+        margin-top: 8rem;
+    }
+
     &__items {
-        max-width: 85%;
+        max-width: 54%;
+        margin: 4rem auto;
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
 
         img {
-            width: 2.5rem;
-            height: 2rem;
+            width: 3rem;
+            height: 3rem;
+            object-fit: contain;
         }
+    }
+
+    &__item {
+        width: 8rem;
+        margin: 3rem 0;
+        text-align: center;
+        filter: grayscale(1);
+        cursor: pointer;
+
+        i {
+            font-size: 3rem;
+        }
+
+        &:hover {
+            filter: saturate(1);
+        }
+    }
+}
+
+.js-projects {
+    position: relative;
+    top: 150rem;
+
+    &__text {
+        text-align: center;
+        margin: 8rem;
+    }
+
+    @include respond(tab-port) {
+        padding: 8rem 0;
     }
 }

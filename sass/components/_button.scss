@@ -13,10 +13,10 @@
     }
 }
 
-.btn--white {
+.btn--dark {
     padding: .5rem 1rem;
     border-radius: 2rem;
-    background-color: $color-white;
+    background-color: $color-grey-dark-2;
     color: $color-lighter;
     font-family: $font-family-small;
     cursor: pointer;
@@ -25,7 +25,7 @@
         transform: translateY(-.3rem);
         box-shadow: 0 1rem 2rem rgba(0,0,0,.15);
         border: none;
-        color: $color-dark;
+        color: $color-lighter;
     }
 
     &:active {

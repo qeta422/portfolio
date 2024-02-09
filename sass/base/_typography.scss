@@ -26,6 +26,12 @@
     font-family: $font-family-small;
     font-weight: 400;
     margin: 1rem 0;
+
+    &__link {
+        &:hover {
+            color: $color-primary;
+        }
+    }
 }
 
 
