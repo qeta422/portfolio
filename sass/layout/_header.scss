@@ -1,33 +1,25 @@
 .header {
     width: 100%;
-    position: relative;
     transition: 0.6s;
-
-    // .sticky {
-    //     backdrop-filter: blur(30px);
-    //     box-shadow: 3px 3px 50px rgba(0, 0, 0, 0.3);
-    // }
 }
 
-.header.sticky {
+.sticky {
     backdrop-filter: blur(30px);
     box-shadow: 3px 3px 50px rgba(0, 0, 0, 0.3);
-  }
+}
 
 .nav {
     width: 50%;
     position: fixed;
+    border-radius: 2rem;
     z-index: 10;
     transition: 0.6s;
-    border-radius: 2rem;
     display: flex;
     left: 50%;
     top: 2rem;
     transform: translateX(-50%);
     justify-content: space-between;
     align-items: center;
-    backdrop-filter: blur(30px);
-    box-shadow: 3px 3px 50px rgba(0, 0, 0, 0.3);
 
     &__left {
         width: 60%;

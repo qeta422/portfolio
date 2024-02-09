@@ -1,3 +1,5 @@
+var nav = document.getElementsByClassName("nav")[0];
+
 window.addEventListener("scroll", () => {
-    header.classList.toggle("sticky", window.scrollY > 0);
-  });
+    nav.classList.toggle("sticky", window.scrollY > 0);
+});
