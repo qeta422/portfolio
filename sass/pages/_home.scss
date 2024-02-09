@@ -44,7 +44,7 @@
     text-align: center;
 }
 
-.tours {
+.work {
 
     @include respond(tab-port) {
         padding: 10rem 0;
@@ -54,4 +54,26 @@
 .projects {
     position: relative;
     top: 150rem;
+
+    &__text {
+        text-align: center;
+        margin: 5rem 0;
+    }
+}
+
+.skills {
+    position: relative;
+    top: 150rem;
+    width: 100%;
+
+    &__items {
+        max-width: 85%;
+        display: flex;
+        justify-content: space-between;
+
+        img {
+            width: 2.5rem;
+            height: 2rem;
+        }
+    }
 }

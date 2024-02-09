@@ -1,12 +1,18 @@
 .header {
     width: 100%;
     position: relative;
+    transition: 0.6s;
 
-    .sticky {
-        backdrop-filter: blur(30px);
-        box-shadow: 3px 3px 50px rgba(0, 0, 0, 0.3);
-    }
+    // .sticky {
+    //     backdrop-filter: blur(30px);
+    //     box-shadow: 3px 3px 50px rgba(0, 0, 0, 0.3);
+    // }
 }
+
+.header.sticky {
+    backdrop-filter: blur(30px);
+    box-shadow: 3px 3px 50px rgba(0, 0, 0, 0.3);
+  }
 
 .nav {
     width: 50%;

@@ -2,7 +2,7 @@
     perspective: 170rem;
     -moz-perspective: 170rem;
     position: relative;
-    height: 40rem;
+    height: 32rem;
 
     &__side {
         color: $color-white;
@@ -25,7 +25,7 @@
             transform: rotateY(180deg);
 
             &-1 {
-                background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+                background-image:  linear-gradient(to right bottom, $color-light-blue, $color-primary-blue);
             }
 
             &-2 {
@@ -33,7 +33,7 @@
             }
 
             &-3 {
-                background-image: linear-gradient(to right bottom, $color-light, $color-primaryy);
+                background-image: linear-gradient(to right bottom, $color-light-blue2, $color-dark-blue2);
             }
         }
     }
@@ -49,18 +49,17 @@
     &__picture {
         background-size: cover;
         height: 12rem;
-        background-blend-mode: screen;
 
         &--1 {
             background-image: url(../img/flip1.jpg);
         }
 
         &--2 {
-            background-image: url(../img/flip3.jpg);
+            background-image: url(../img/flip2.jpg);
         }
 
         &--3 {
-            background-image: url(../img/flip2.jpg);
+            background-image: url(../img/flip3.jpg);
         }
     }
 
@@ -78,11 +77,11 @@
     }
 
     &__heading-span {
-        padding: .3rem .7rem;
-        -webkit-box-decoration-break: clone;
+        padding: .2rem .7rem;
+        font-family: $font-family-big;
 
         &--1 {
-            background-image: linear-gradient(to right bottom, rgba($color-secondary-light, .5), rgba($color-secondary-dark, .5));
+            background-image: linear-gradient(to right bottom, rgba($color-light-blue, .5), rgba($color-primary-blue, .5));
         }
 
         &--2 {
@@ -90,28 +89,19 @@
         }
 
         &--3 {
-            background-image: linear-gradient(to right bottom, rgba($color-light, .5), rgba($color-primaryy, .5));
+            background-image: linear-gradient(to right bottom,  rgba($color-light-blue2, .5), rgba($color-dark-blue2, .5));
         }
     }
 
     &__details {
         padding: 2.5rem;
 
-        ul {
-            list-style-type: none;
-            width: 80%;
-            margin: 0 auto;
-
-            li {
-                text-align: center;
-                font-size: 1.5rem;
-                padding: .5rem;
-                color: $color-grey-dark;
-
-                &:not(:last-child) {
-                    border-bottom: 1px solid $color-grey-light-2;
-                }
-            }
+        p {
+            text-align: center;
+            padding: .5rem;
+            color: $color-light;
+            line-height: 1.3rem;
+            font-size: .9rem;
         }
     }
 
@@ -125,9 +115,10 @@
         font-size: 1rem;
     }
 
-    &__price-box {
+    &__name-box {
         text-align: center;
         margin-bottom: 2.5rem;
+        font-family: $font-family-small;
     }
 
     &__price-name {
@@ -169,13 +160,8 @@
             padding: 7rem 4rem 4rem 4rem;
         }
 
-        &__price-box {
+        &__name-box {
             margin-bottom: 3rem;
         }
-
-        &__price-value {
-            font-size: 5rem;
-        }
-
     }
 }
