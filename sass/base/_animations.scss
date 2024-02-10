@@ -32,14 +32,32 @@
 
 @keyframes bottomanimation {
     0% {
-      opacity: 0;
-      transform: translateY(10rem);
+        opacity: 0;
+        transform: translateY(10rem);
     }
+
     80% {
-      opacity: 0;
+        transform: translateY(-1rem);
     }
+
     100% {
-      opacity: 1;
-      transform: translateY(0);
+        opacity: 1;
+        transform: translateY(0);
     }
-  }
+}
+
+@keyframes topanimation {
+    0% {
+        opacity: 0;
+        transform: translateY(-10rem);
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

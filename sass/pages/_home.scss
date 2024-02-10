@@ -1,5 +1,5 @@
 .banner {
-    width: 100%;
+    max-width: 100%;
     position: relative;
 
     &__text {
@@ -40,10 +40,6 @@
         position: absolute;
         top: 5rem;
         left: 50rem;
-
-
-        animation-name: moveInRight;
-        animation-duration: 2s;
 
         p {
             line-height: 1.3rem;

@@ -1,6 +1,9 @@
 .header {
     width: 100%;
     transition: 0.6s;
+
+    animation: topanimation ease-in-out;
+    animation-duration: 1.7s;
 }
 
 .sticky {

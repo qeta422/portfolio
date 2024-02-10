@@ -1,7 +1,9 @@
 .socials {
-    animation: bottomanimation 1.5s ease-in-out forwards;
     position: fixed;
     bottom: 1rem;
+
+    animation: bottomanimation;
+    animation-duration: 2s;
 
     &__icons {
         display: flex;
@@ -20,6 +22,11 @@
             margin-bottom: 5rem;
         }
 
+        &:hover {
+        color: $color-primary;
+        transform: translateY(-.3rem);
+        transition: all 0.3s;
+        }
     }
 
     hr {
@@ -32,9 +39,4 @@
         -webkit-background-clip: line;
         color: transparent;
     }
-
-    // &:hover &__link {
-    //     filter: drop-shadow(#00daf4 0px 0px 5px);
-    //     transition: all 0.3s ease-in-out;
-    // }
 }
