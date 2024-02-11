@@ -105,7 +105,12 @@ body {
 }
 @media (max-width: 56.25em) {
   .heading {
-    font-size: 2rem;
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .heading {
+    font-size: 1rem;
   }
 }
 
@@ -148,6 +153,16 @@ body {
 }
 .heading-small__link:hover {
   color: #028a0f;
+}
+@media (max-width: 56.25em) {
+  .heading-small {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .heading-small {
+    font-size: 0.5rem;
+  }
 }
 
 .btn {
@@ -682,13 +697,14 @@ body {
 @media (max-width: 56.25em) {
   .banner__text {
     top: 13rem;
-    left: 9rem;
-    max-width: 40rem;
+    left: 8rem;
+    max-width: 30rem;
   }
 }
 @media (max-width: 37.5em) {
   .banner__text {
     top: 12rem;
+    max-width: 25rem;
   }
 }
 .banner__text h3 {
@@ -722,17 +738,8 @@ body {
 }
 @media (max-width: 112.5em) {
   .about__photo img {
-    margin: 0 5rem;
-  }
-}
-@media (max-width: 75em) {
-  .about__photo img {
-    margin: 0 7rem;
-  }
-}
-@media (max-width: 56.25em) {
-  .about__photo img {
-    margin: 0 6rem;
+    margin: 0;
+    max-width: 100%;
   }
 }
 .about__text {
@@ -740,6 +747,7 @@ body {
   position: absolute;
   top: 5rem;
   left: 50rem;
+  margin-left: 6rem;
 }
 .about__text p {
   line-height: 1.3rem;
@@ -755,13 +763,6 @@ body {
     left: 0;
     margin: 0 auto;
     width: 50%;
-    margin-bottom: 5rem;
-  }
-}
-@media (max-width: 56.25em) {
-  .about__text {
-    left: 3rem;
-    width: 70%;
     margin-bottom: 5rem;
   }
 }

@@ -19,12 +19,13 @@
 
         @include respond(tab-port) {
             top: 13rem;
-            left: 9rem;
-            max-width: 40rem;
+            left: 8rem;
+            max-width: 30rem;
         }
 
         @include respond(phone) {
             top: 12rem;
+            max-width: 25rem;
         }
 
         h3 {
@@ -35,7 +36,7 @@
 
 .about {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; 
     position: relative;
     top: 50rem;
 
@@ -58,15 +59,8 @@
             margin: 0 9rem;
 
             @include respond(big-desktop) {
-                margin: 0 5rem;
-            }
-
-            @include respond(tab-land) {
-                margin: 0 7rem;
-            }
-
-            @include respond(tab-port) {
-                margin: 0 6rem;
+                margin: 0;
+                max-width: 100%;
             }
         }
     }
@@ -76,6 +70,7 @@
         position: absolute;
         top: 5rem;
         left: 50rem;
+        margin-left: 6rem;
 
         p {
             line-height: 1.3rem;
@@ -90,12 +85,6 @@
             left: 0;
             margin: 0 auto;
             width: 50%;
-            margin-bottom: 5rem;
-        }
-
-        @include respond(tab-port) {
-            left: 3rem;
-            width: 70%;
             margin-bottom: 5rem;
         }
     }
