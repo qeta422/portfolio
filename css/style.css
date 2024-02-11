@@ -103,12 +103,27 @@ body {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
 }
+@media (max-width: 56.25em) {
+  .heading {
+    font-size: 2rem;
+  }
+}
 
 .heading-medium {
   font-size: 2rem;
   color: #E0E0E0;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
+}
+@media (max-width: 56.25em) {
+  .heading-medium {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .heading-medium {
+    font-size: 1rem;
+  }
 }
 
 .paragraph {
@@ -117,6 +132,11 @@ body {
   font-family: "Fira Code", monospace;
   font-weight: 400;
   margin-bottom: 1rem;
+}
+@media (max-width: 37.5em) {
+  .paragraph {
+    font-size: 0.9rem;
+  }
 }
 
 .heading-small {
@@ -591,6 +611,21 @@ body {
   animation-name: moveInLeft;
   animation-duration: 2s;
 }
+@media (max-width: 75em) {
+  .banner__text {
+    top: 14rem;
+  }
+}
+@media (max-width: 56.25em) {
+  .banner__text {
+    top: 13rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .banner__text {
+    top: 12rem;
+  }
+}
 .banner__text h3 {
   line-height: 1.3rem;
 }
@@ -601,14 +636,35 @@ body {
   position: relative;
   top: 50rem;
 }
+@media (max-width: 75em) {
+  .about {
+    flex-direction: column;
+  }
+}
 .about__photo {
   width: 50%;
+}
+@media (max-width: 75em) {
+  .about__photo {
+    width: 100%;
+  }
 }
 .about__photo img {
   max-width: 80%;
   max-height: fit-content;
   object-fit: cover;
   margin: 0 9rem;
+}
+@media (max-width: 112.5em) {
+  .about__photo img {
+    margin: 0 5rem;
+  }
+}
+@media (max-width: 75em) {
+  .about__photo img {
+    max-width: 100%;
+    margin: 0;
+  }
 }
 .about__text {
   width: 37%;
@@ -618,6 +674,20 @@ body {
 }
 .about__text p {
   line-height: 1.3rem;
+}
+@media screen and (max-height: 1370px) {
+  .about__text {
+    left: 45rem;
+  }
+}
+@media (max-width: 75em) {
+  .about__text {
+    position: relative;
+    left: 0;
+    margin: 0 auto;
+    width: 50%;
+    margin-bottom: 5rem;
+  }
 }
 
 .education {

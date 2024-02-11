@@ -11,8 +11,19 @@
         animation-name: moveInLeft;
         animation-duration: 2s;
 
-        h3 {
+        @include respond(tab-land) {
+            top: 14rem;
+        }
 
+        @include respond(tab-port) {
+            top: 13rem;
+        }
+
+        @include respond(phone) {
+            top: 12rem;
+        }
+
+        h3 {
             line-height: 1.3rem;
         }
     }
@@ -24,14 +35,32 @@
     position: relative;
     top: 50rem;
 
+    @include respond(tab-land) {
+        flex-direction: column;
+    }
+
     &__photo {
         width: 50%;
+
+        @include respond(tab-land) {
+            width: 100%;
+        }
+
 
         img {
             max-width: 80%;
             max-height: fit-content;
             object-fit: cover;
             margin: 0 9rem;
+
+            @include respond(big-desktop) {
+                margin: 0 5rem;
+            }
+
+            @include respond(tab-land) {
+                max-width: 100%;
+                margin: 0;
+            }
         }
     }
 
@@ -44,7 +73,29 @@
         p {
             line-height: 1.3rem;
         }
+
+        @media screen and (max-height: 1370px) {
+            left: 45rem;
+        }
+
+        @include respond(tab-land) {
+            position: relative;
+            left: 0;
+            margin: 0 auto;
+            width: 50%;
+            margin-bottom: 5rem;
+        }
     }
+
+    
+
+    // @include respond(tab-port) {
+    //     top: 13rem;
+    // }
+
+    // @include respond(phone) {
+    //     top: 12rem;
+    // }
 }
 
 .education {
