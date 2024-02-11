@@ -1,0 +1,11 @@
+.typewriter-text {
+    overflow: hidden;
+    width: 10rem;
+    border-right: 2px solid rgba($color-lighter, 0.75);
+    white-space: nowrap;  
+}
+
+.animated {
+    animation: typewriter 1.5s steps(7) .5s 1 normal, 
+            blinkTextCursor 800ms infinite steps(7) normal; 
+} 
