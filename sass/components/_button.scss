@@ -16,6 +16,10 @@
             transition: 1s;
         }
     }
+
+    @include respond(tab-land) {
+        padding: .4rem .8rem;
+    }
 }
 
 .btn--dark {

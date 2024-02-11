@@ -18,7 +18,7 @@ html {
     font-size: 50%;
   }
 }
-@media (min-width: 112.5em) {
+@media (max-width: 112.5em) {
   html {
     font-size: 75%;
   }
@@ -146,6 +146,11 @@ body {
 .btn__link:hover {
   color: #E0E0E0;
   transition: 1s;
+}
+@media (max-width: 75em) {
+  .btn {
+    padding: 0.4rem 0.8rem;
+  }
 }
 
 .btn--dark {
@@ -428,6 +433,16 @@ body {
 .nav__left {
   width: 60%;
 }
+@media (max-width: 112.5em) {
+  .nav__left {
+    width: 65%;
+  }
+}
+@media (max-width: 75em) {
+  .nav__left {
+    width: 70%;
+  }
+}
 .nav__list {
   display: flex;
 }
@@ -436,6 +451,18 @@ body {
   color: #028a0f;
   font-family: "Fira Code", monospace;
   font-size: 13px;
+}
+@media (max-width: 112.5em) {
+  .nav__list li {
+    padding: 0.8rem;
+    font-size: 12px;
+  }
+}
+@media (max-width: 75em) {
+  .nav__list li {
+    padding: 0.7rem;
+    font-size: 10px;
+  }
 }
 .nav__list li:hover {
   color: #03AC13;
@@ -453,6 +480,16 @@ body {
 }
 .nav__right {
   width: 40%;
+}
+@media (max-width: 112.5em) {
+  .nav__right {
+    width: 35%;
+  }
+}
+@media (max-width: 75em) {
+  .nav__right {
+    width: 30%;
+  }
 }
 .nav__btn {
   float: right;

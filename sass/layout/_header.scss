@@ -26,6 +26,15 @@
 
     &__left {
         width: 60%;
+
+        @include respond(big-desktop) {
+            width: 65%;
+        }
+
+        @include respond(tab-land) {
+            width: 70%;
+        }
+        
     }
 
     &__list {
@@ -36,6 +45,16 @@
             color: $color-primary;
             font-family: $font-family-small;
             font-size: 13px;
+
+            @include respond(big-desktop) {
+                padding: .8rem;
+                font-size: 12px;
+            }
+
+            @include respond(tab-land) {
+                padding: .7rem;
+                font-size: 10px;
+            }
         }
 
         li:hover {
@@ -58,6 +77,14 @@
 
     &__right {
         width: 40%;
+
+        @include respond(big-desktop) {
+            width: 35%;
+        }
+
+        @include respond(tab-land) {
+            width: 30%;
+        }
     }
 
     &__btn {
