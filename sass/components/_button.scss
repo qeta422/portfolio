@@ -20,6 +20,10 @@
     @include respond(tab-land) {
         padding: .4rem .8rem;
     }
+
+    @include respond(tab-port) {
+        padding: .3rem .7rem;
+    }
 }
 
 .btn--dark {

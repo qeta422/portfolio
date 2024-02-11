@@ -24,6 +24,18 @@
     justify-content: space-between;
     align-items: center;
 
+    @include respond(tab-land) {
+        width: 55%;
+    }
+
+    @include respond(tab-port) {
+        width: 60%;
+    }
+
+    @include respond(phone) {
+        width: 65%;
+    }
+
     &__left {
         width: 60%;
 
@@ -33,6 +45,10 @@
 
         @include respond(tab-land) {
             width: 70%;
+        }
+
+        @include respond(tab-port) {
+            width: 75%;
         }
         
     }
@@ -55,6 +71,11 @@
                 padding: .7rem;
                 font-size: 10px;
             }
+
+            @include respond(tab-port) {
+                padding: .5rem;
+                font-size: 9px;
+            }
         }
 
         li:hover {
@@ -68,6 +89,18 @@
         font-family: $font-family-small;
         font-weight: 400;
         font-size: 14px;
+
+        @include respond(big-desktop) {
+            font-size: 12px;
+        }
+
+        @include respond(tab-land) {
+            font-size: 10px;
+        }
+
+        @include respond(tab-port) {
+            font-size: 9px;
+        }
 
         &:hover  {
             color: $color-lighter2;
@@ -84,6 +117,10 @@
 
         @include respond(tab-land) {
             width: 30%;
+        }
+
+        @include respond(tab-land) {
+            width: 25%;
         }
     }
 
