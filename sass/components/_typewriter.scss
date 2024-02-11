@@ -2,7 +2,15 @@
     overflow: hidden;
     width: 10rem;
     border-right: 2px solid rgba($color-lighter, 0.75);
-    white-space: nowrap;  
+    white-space: nowrap;
+    
+    @include respond(tab-port) {
+        width: 8rem;
+    }
+
+    @include respond(phone) {
+        width: 5.5rem;
+    }
 }
 
 .animated {

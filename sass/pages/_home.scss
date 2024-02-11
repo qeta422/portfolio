@@ -6,17 +6,21 @@
         position: absolute;
         top: 20rem;
         left: 15rem;
-        max-width: 55rem;
+        max-width: 50rem;
 
         animation-name: moveInLeft;
         animation-duration: 2s;
 
         @include respond(tab-land) {
             top: 14rem;
+            left: 10rem;
+            max-width: 45rem;
         }
 
         @include respond(tab-port) {
             top: 13rem;
+            left: 9rem;
+            max-width: 40rem;
         }
 
         @include respond(phone) {
@@ -58,8 +62,11 @@
             }
 
             @include respond(tab-land) {
-                max-width: 100%;
-                margin: 0;
+                margin: 0 7rem;
+            }
+
+            @include respond(tab-port) {
+                margin: 0 6rem;
             }
         }
     }
@@ -85,17 +92,13 @@
             width: 50%;
             margin-bottom: 5rem;
         }
+
+        @include respond(tab-port) {
+            left: 3rem;
+            width: 70%;
+            margin-bottom: 5rem;
+        }
     }
-
-    
-
-    // @include respond(tab-port) {
-    //     top: 13rem;
-    // }
-
-    // @include respond(phone) {
-    //     top: 12rem;
-    // }
 }
 
 .education {
