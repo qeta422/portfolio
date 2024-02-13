@@ -526,6 +526,14 @@ body {
 .education .fifth {
   padding-top: 4rem;
 }
+.education .leftitem .slide-left {
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+}
+.education .rightitem .slide-right {
+  animation-name: moveInRight;
+  animation-duration: 1s;
+}
 
 .header {
   width: 100%;

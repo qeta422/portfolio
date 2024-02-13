@@ -55,4 +55,21 @@
     .fifth {
         padding-top: 4rem;
     }
+
+    .leftitem {
+
+        .slide-left {
+            animation-name: moveInLeft;
+            animation-duration: 1s;
+        }
+    }
+
+    .rightitem {
+
+        .slide-right {
+            animation-name: moveInRight;
+            animation-duration: 1s;
+        }
+    }
+
 }
