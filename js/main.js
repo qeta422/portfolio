@@ -13,5 +13,5 @@ window.addEventListener("scroll", () => {
     second.classList.toggle("rightitem", window.scrollY > 1300);
     third.classList.toggle("leftitem", window.scrollY > 1500);
     fourth.classList.toggle("rightitem", window.scrollY > 1700);
-    fifth.classList.toggle("leftitem", window.scrollY > 2000);
+    fifth.classList.toggle("leftitem", window.scrollY > 2100);
 });
