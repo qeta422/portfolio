@@ -150,6 +150,7 @@ body {
   font-family: "Fira Code", monospace;
   font-weight: 400;
   margin: 1rem 0;
+  line-height: 1.5rem;
 }
 .heading-small__link:hover {
   color: #028a0f;
@@ -163,6 +164,30 @@ body {
   .heading-small {
     font-size: 0.5rem;
   }
+}
+
+.heading-small-dark {
+  font-size: 1rem;
+  color: #757575;
+  font-family: "Fira Code", monospace;
+  font-weight: 400;
+  margin: 1rem 0;
+}
+.heading-small-dark__link:hover {
+  color: #028a0f;
+}
+@media (max-width: 56.25em) {
+  .heading-small-dark {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .heading-small-dark {
+    font-size: 0.5rem;
+  }
+}
+.heading-small-dark__left {
+  float: right;
 }
 
 .btn {
@@ -225,7 +250,7 @@ body {
   perspective: 170rem;
   -moz-perspective: 170rem;
   position: relative;
-  height: 32rem;
+  height: 25rem;
 }
 .card__side {
   color: #ffffff;
@@ -455,6 +480,53 @@ body {
   animation: typewriter 1.5s steps(7) 0.5s 1 normal, blinkTextCursor 800ms infinite steps(7) normal;
 }
 
+.education {
+  position: relative;
+  top: 58rem;
+}
+.education__text {
+  text-align: center;
+  margin: 1rem;
+}
+.education__tree {
+  margin-top: 5rem;
+}
+.education__tree hr {
+  transform: rotate(90deg);
+  position: relative;
+  top: 45rem;
+}
+.education__tree img {
+  width: 4rem;
+  height: 4rem;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #757575;
+  margin-bottom: 17rem;
+}
+.education__tree__item {
+  padding-bottom: 2rem;
+}
+.education__tree .grid-text {
+  padding: 0 2rem;
+}
+.education__img {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 46%;
+  transform: translateX(-46%);
+}
+.education .third {
+  padding-top: 6rem;
+}
+.education .fourth {
+  padding-top: 3.5rem;
+}
+.education .fifth {
+  padding-top: 4rem;
+}
+
 .header {
   width: 100%;
   transition: 0.6s;
@@ -468,7 +540,7 @@ body {
 }
 
 .nav {
-  width: 50%;
+  width: 40%;
   position: fixed;
   border-radius: 2rem;
   z-index: 10;
@@ -658,7 +730,7 @@ body {
 .footer {
   max-width: 100%;
   position: relative;
-  top: 155rem;
+  top: 77rem;
 }
 .footer hr {
   width: 50%;
@@ -767,12 +839,6 @@ body {
   }
 }
 
-.education {
-  position: relative;
-  top: 55rem;
-  text-align: center;
-}
-
 @media (max-width: 56.25em) {
   .work {
     padding: 10rem 0;
@@ -781,7 +847,7 @@ body {
 
 .projects {
   position: relative;
-  top: 150rem;
+  top: 62rem;
 }
 .projects__text {
   text-align: center;
@@ -790,7 +856,7 @@ body {
 
 .skills {
   position: relative;
-  top: 150rem;
+  top: 69rem;
   width: 100%;
 }
 .skills__text {
@@ -825,7 +891,7 @@ body {
 
 .js-projects {
   position: relative;
-  top: 150rem;
+  top: 69rem;
 }
 .js-projects__text {
   text-align: center;

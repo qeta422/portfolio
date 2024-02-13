@@ -46,6 +46,7 @@
     font-family: $font-family-small;
     font-weight: 400;
     margin: 1rem 0;
+    line-height: 1.5rem;
 
     &__link {
         &:hover {
@@ -59,6 +60,32 @@
 
     @include respond(phone) {
         font-size: .5rem;  
+    }
+}
+
+.heading-small-dark {
+    font-size: 1rem;
+    color: $color-light;
+    font-family: $font-family-small;
+    font-weight: 400;
+    margin: 1rem 0;
+
+    &__link {
+        &:hover {
+            color: $color-primary;
+        }
+    }
+
+    @include respond(tab-port) {
+        font-size: .8rem;
+    }
+
+    @include respond(phone) {
+        font-size: .5rem;  
+    }
+
+    &__left {
+        float: right;
     }
 }
 
