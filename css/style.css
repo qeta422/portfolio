@@ -534,6 +534,30 @@ body {
   animation-name: moveInRight;
   animation-duration: 1s;
 }
+@media (max-width: 75em) {
+  .education__tree {
+    margin: 5rem 13rem;
+    float: left;
+  }
+  .education__tree hr {
+    display: none;
+  }
+  .education__tree img {
+    display: none;
+  }
+  .education__tree .grid-text {
+    padding: 0 2rem;
+    float: right;
+  }
+  .education__img {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    left: 5px;
+    transform: translateX(0);
+  }
+}
 
 .header {
   width: 100%;
