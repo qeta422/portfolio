@@ -254,6 +254,12 @@ body {
   transition: all 0.2s;
 }
 
+.btn-center {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .card {
   perspective: 170rem;
   -moz-perspective: 170rem;
