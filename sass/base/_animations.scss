@@ -81,3 +81,13 @@
         border-right-color: transparent;
     }
 }
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translate(-50%);
+    }
+}
+  

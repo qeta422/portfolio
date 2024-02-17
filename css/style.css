@@ -97,6 +97,14 @@ body {
     border-right-color: transparent;
   }
 }
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translate(-50%);
+  }
+}
 .heading {
   font-size: 3.5rem;
   color: #E0E0E0;
@@ -559,6 +567,31 @@ body {
   }
 }
 
+.marquee-content {
+  display: flex;
+  animation: marquee 10s linear infinite running;
+}
+.marquee-content:hover {
+  animation-play-state: paused;
+}
+.marquee-content__tag {
+  margin: 0 1rem;
+  padding: 0.5em;
+  background: #757575;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+.marquee-content__tag img {
+  width: 400px;
+}
+.marquee-content__tag:hover {
+  background: #BDBDBD;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
 .header {
   width: 100%;
   transition: 0.6s;
@@ -919,6 +952,20 @@ body {
 }
 .skills__item:hover {
   filter: saturate(1);
+}
+
+.marquee {
+  position: relative;
+  top: 70rem;
+  background: linear-gradient(-135deg, #757575, #212121);
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1em;
+  color: white;
+  font-weight: 200;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
 }
 
 .js-projects {
