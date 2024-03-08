@@ -29,7 +29,7 @@
             }
 
             &-2 {
-                background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
+                background-image: linear-gradient(to right bottom, $color-fourthiary-light, $color-fourthiary-dark);
             }
 
             &-3 {
@@ -55,7 +55,7 @@
         }
 
         &--2 {
-            background-image: url(../img/flip2.jpg);
+            background-image: url(../img/flip2.png);
         }
 
         &--3 {
@@ -85,7 +85,7 @@
         }
 
         &--2 {
-            background-image: linear-gradient(to right bottom, rgba($color-tertiary-light, .5), rgba($color-tertiary-dark, .5));
+            background-image: linear-gradient(to right bottom, rgba($color-fourthiary-light, .5), rgba($color-fourthiary-dark, .5));
         }
 
         &--3 {
