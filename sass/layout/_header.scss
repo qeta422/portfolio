@@ -72,21 +72,31 @@
       padding: 1rem;
       color: $color-primary;
       font-family: $font-family-small;
-      font-size: 13px;
+      font-size: 17px;
 
       @include respond(big-desktop) {
         padding: 0.8rem;
-        font-size: 12px;
+        font-size: 20px;
       }
 
       @include respond(tab-land) {
         padding: 0.7rem;
-        font-size: 10px;
+        font-size: 17px;
       }
 
       @include respond(tab-port) {
         padding: 0.5rem;
-        font-size: 9px;
+        font-size: 12px;
+      }
+
+      @include respond(phone) {
+        width: 65%;
+        padding: 9px;
+      }
+
+      @include respond(phones) {
+        width: 70%;
+        padding: 7px;
       }
     }
 
@@ -103,15 +113,23 @@
     font-size: 14px;
 
     @include respond(big-desktop) {
-      font-size: 12px;
+      font-size: 17px;
     }
 
     @include respond(tab-land) {
-      font-size: 10px;
+      font-size: 12px;
     }
 
     @include respond(tab-port) {
       font-size: 9px;
+    }
+
+    @include respond(phone) {
+      padding: 7px;
+    }
+
+    @include respond(phones) {
+      padding: 5px;
     }
 
     &:hover {

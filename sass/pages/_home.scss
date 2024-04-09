@@ -11,6 +11,12 @@
     animation-name: moveInLeft;
     animation-duration: 2s;
 
+    @include respond(big-desktop) {
+      top: 13rem;
+      left: 15rem;
+      max-width: 85rem;
+    }
+
     @include respond(tab-land) {
       top: 14rem;
       left: 10rem;
@@ -23,15 +29,59 @@
       max-width: 30rem;
     }
 
+    @include respond(phone) {
+      top: 14rem;
+      left: 10rem;
+      max-width: 45rem;
+    }
+
+    @include respond(phones) {
+      top: 14rem;
+      left: 10rem;
+      max-width: 45rem;
+    }
+
+    h1 {
+      font-size: 45px;
+    }
+
     h3 {
-      line-height: 1.3rem;
+      line-height: 2.1rem;
+      font-size: 25px;
+
+      @include respond(big-desktop) {
+        line-height: 2.5rem;
+        font-size: 30px;
+      }
+
+      @include respond(tab-land) {
+        line-height: 2.5rem;
+        font-size: 25px;
+      }
+
+      @include respond(tab-port) {
+        line-height: 1.7rem;
+        font-size: 22px;
+      }
+
+      @include respond(phone) {
+        line-height: 1.1rem;
+        font-size: 15px;
+      }
+
+      @include respond(phones) {
+        line-height: 1rem;
+        font-size: 10px;
+      }
     }
   }
 }
 
 .about {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
   position: relative;
   top: 50rem;
 
@@ -47,24 +97,54 @@
     }
 
     img {
-      max-width: 80%;
+      max-width: 90%;
       max-height: fit-content;
       object-fit: cover;
-      margin: 0 9rem;
+      margin: auto;
 
-      @include respond(big-desktop) {
-        margin: 0;
+      @include respond(tab-land) {
         max-width: 100%;
       }
     }
   }
 
   &__text {
-    width: 37%;
-    position: absolute;
-    top: 5rem;
-    left: 50rem;
-    margin-left: 6rem;
+    max-width: 40%;
+
+    @include respond(big-desktop) {
+      left: 0;
+      margin: 0 auto;
+      width: 45%;
+      margin-bottom: 3rem;
+    }
+
+    @include respond(tab-land) {
+      position: relative;
+      left: 0;
+      margin: 5rem auto;
+      width: 60%;
+    }
+
+    @include respond(tab-port) {
+      position: relative;
+      left: 0;
+      margin: 5rem auto;
+      width: 70%;
+    }
+
+    @include respond(phone) {
+      position: relative;
+      left: 0;
+      margin: 5rem auto;
+      width: 80%;
+    }
+
+    @include respond(phones) {
+      position: relative;
+      left: 0;
+      margin: 5rem auto;
+      width: 90%;
+    }
 
     h1 {
       font-size: 30px;
@@ -75,32 +155,33 @@
     }
 
     p {
-      line-height: 1.3rem;
-      font-size: 15px;
+      line-height: 1.9rem;
+      font-size: 24px;
 
       @include respond(big-desktop) {
         line-height: 2rem;
         font-size: 30px;
       }
-    }
 
-    @media screen and (max-height: 1370px) {
-      left: 45rem;
-    }
+      @include respond(tab-land) {
+        line-height: 1.7rem;
+        font-size: 20px;
+      }
 
-    @include respond(tab-land) {
-      position: relative;
-      left: 0;
-      margin: 0 auto;
-      width: 50%;
-    }
+      @include respond(tab-port) {
+        line-height: 1.5rem;
+        font-size: 17px;
+      }
 
-    @include respond(big-desktop) {
-      position: relative;
-      left: 0;
-      margin: 0 auto;
-      width: 45%;
-      margin-bottom: 3rem;
+      @include respond(phone) {
+        line-height: 1.1rem;
+        font-size: 15px;
+      }
+
+      @include respond(phones) {
+        line-height: 1rem;
+        font-size: 10px;
+      }
     }
   }
 }

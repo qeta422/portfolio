@@ -688,24 +688,36 @@ body {
   padding: 1rem;
   color: #028a0f;
   font-family: "Fira Code", monospace;
-  font-size: 13px;
+  font-size: 17px;
 }
 @media (min-width: 112.5em) {
   .nav__list li {
     padding: 0.8rem;
-    font-size: 12px;
+    font-size: 20px;
   }
 }
 @media (max-width: 75em) {
   .nav__list li {
     padding: 0.7rem;
-    font-size: 10px;
+    font-size: 17px;
   }
 }
 @media (max-width: 56.25em) {
   .nav__list li {
     padding: 0.5rem;
-    font-size: 9px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 37.5em) {
+  .nav__list li {
+    width: 65%;
+    padding: 9px;
+  }
+}
+@media (max-width: 18.5em) {
+  .nav__list li {
+    width: 70%;
+    padding: 7px;
   }
 }
 .nav__list li:hover {
@@ -720,17 +732,27 @@ body {
 }
 @media (min-width: 112.5em) {
   .nav__link {
-    font-size: 12px;
+    font-size: 17px;
   }
 }
 @media (max-width: 75em) {
   .nav__link {
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 @media (max-width: 56.25em) {
   .nav__link {
     font-size: 9px;
+  }
+}
+@media (max-width: 37.5em) {
+  .nav__link {
+    padding: 7px;
+  }
+}
+@media (max-width: 18.5em) {
+  .nav__link {
+    padding: 5px;
   }
 }
 .nav__link:hover {
@@ -855,6 +877,13 @@ body {
   animation-name: moveInLeft;
   animation-duration: 2s;
 }
+@media (min-width: 112.5em) {
+  .banner__text {
+    top: 13rem;
+    left: 15rem;
+    max-width: 85rem;
+  }
+}
 @media (max-width: 75em) {
   .banner__text {
     top: 14rem;
@@ -869,13 +898,63 @@ body {
     max-width: 30rem;
   }
 }
+@media (max-width: 37.5em) {
+  .banner__text {
+    top: 14rem;
+    left: 10rem;
+    max-width: 45rem;
+  }
+}
+@media (max-width: 18.5em) {
+  .banner__text {
+    top: 14rem;
+    left: 10rem;
+    max-width: 45rem;
+  }
+}
+.banner__text h1 {
+  font-size: 45px;
+}
 .banner__text h3 {
-  line-height: 1.3rem;
+  line-height: 2.1rem;
+  font-size: 25px;
+}
+@media (min-width: 112.5em) {
+  .banner__text h3 {
+    line-height: 2.5rem;
+    font-size: 30px;
+  }
+}
+@media (max-width: 75em) {
+  .banner__text h3 {
+    line-height: 2.5rem;
+    font-size: 25px;
+  }
+}
+@media (max-width: 56.25em) {
+  .banner__text h3 {
+    line-height: 1.7rem;
+    font-size: 22px;
+  }
+}
+@media (max-width: 37.5em) {
+  .banner__text h3 {
+    line-height: 1.1rem;
+    font-size: 15px;
+  }
+}
+@media (max-width: 18.5em) {
+  .banner__text h3 {
+    line-height: 1rem;
+    font-size: 10px;
+  }
 }
 
 .about {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
   position: relative;
   top: 50rem;
 }
@@ -893,23 +972,58 @@ body {
   }
 }
 .about__photo img {
-  max-width: 80%;
+  max-width: 90%;
   max-height: fit-content;
   object-fit: cover;
-  margin: 0 9rem;
+  margin: auto;
 }
-@media (min-width: 112.5em) {
+@media (max-width: 75em) {
   .about__photo img {
-    margin: 0;
     max-width: 100%;
   }
 }
 .about__text {
-  width: 37%;
-  position: absolute;
-  top: 5rem;
-  left: 50rem;
-  margin-left: 6rem;
+  max-width: 40%;
+}
+@media (min-width: 112.5em) {
+  .about__text {
+    left: 0;
+    margin: 0 auto;
+    width: 45%;
+    margin-bottom: 3rem;
+  }
+}
+@media (max-width: 75em) {
+  .about__text {
+    position: relative;
+    left: 0;
+    margin: 5rem auto;
+    width: 60%;
+  }
+}
+@media (max-width: 56.25em) {
+  .about__text {
+    position: relative;
+    left: 0;
+    margin: 5rem auto;
+    width: 70%;
+  }
+}
+@media (max-width: 37.5em) {
+  .about__text {
+    position: relative;
+    left: 0;
+    margin: 5rem auto;
+    width: 80%;
+  }
+}
+@media (max-width: 18.5em) {
+  .about__text {
+    position: relative;
+    left: 0;
+    margin: 5rem auto;
+    width: 90%;
+  }
 }
 .about__text h1 {
   font-size: 30px;
@@ -920,8 +1034,8 @@ body {
   }
 }
 .about__text p {
-  line-height: 1.3rem;
-  font-size: 15px;
+  line-height: 1.9rem;
+  font-size: 24px;
 }
 @media (min-width: 112.5em) {
   .about__text p {
@@ -929,26 +1043,28 @@ body {
     font-size: 30px;
   }
 }
-@media screen and (max-height: 1370px) {
-  .about__text {
-    left: 45rem;
-  }
-}
 @media (max-width: 75em) {
-  .about__text {
-    position: relative;
-    left: 0;
-    margin: 0 auto;
-    width: 50%;
+  .about__text p {
+    line-height: 1.7rem;
+    font-size: 20px;
   }
 }
-@media (min-width: 112.5em) {
-  .about__text {
-    position: relative;
-    left: 0;
-    margin: 0 auto;
-    width: 45%;
-    margin-bottom: 3rem;
+@media (max-width: 56.25em) {
+  .about__text p {
+    line-height: 1.5rem;
+    font-size: 17px;
+  }
+}
+@media (max-width: 37.5em) {
+  .about__text p {
+    line-height: 1.1rem;
+    font-size: 15px;
+  }
+}
+@media (max-width: 18.5em) {
+  .about__text p {
+    line-height: 1rem;
+    font-size: 10px;
   }
 }
 
