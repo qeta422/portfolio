@@ -1,177 +1,200 @@
 .banner {
-    max-width: 100%;
-    position: relative;
+  max-width: 100%;
+  position: relative;
 
-    &__text {
-        position: absolute;
-        top: 20rem;
-        left: 15rem;
-        max-width: 50rem;
+  &__text {
+    position: absolute;
+    top: 20rem;
+    left: 15rem;
+    max-width: 50rem;
 
-        animation-name: moveInLeft;
-        animation-duration: 2s;
+    animation-name: moveInLeft;
+    animation-duration: 2s;
 
-        @include respond(tab-land) {
-            top: 14rem;
-            left: 10rem;
-            max-width: 45rem;
-        }
-
-        @include respond(tab-port) {
-            top: 13rem;
-            left: 8rem;
-            max-width: 30rem;
-        }
-
-        @include respond(phone) {
-            top: 12rem;
-            max-width: 25rem;
-        }
-
-        h3 {
-            line-height: 1.3rem;
-        }
+    @include respond(tab-land) {
+      top: 14rem;
+      left: 10rem;
+      max-width: 45rem;
     }
+
+    @include respond(tab-port) {
+      top: 13rem;
+      left: 8rem;
+      max-width: 30rem;
+    }
+
+    h3 {
+      line-height: 1.3rem;
+    }
+  }
 }
 
 .about {
-    display: flex;
-    justify-content: space-between; 
-    position: relative;
-    top: 50rem;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  top: 50rem;
+
+  @include respond(tab-land) {
+    flex-direction: column;
+  }
+
+  &__photo {
+    width: 50%;
 
     @include respond(tab-land) {
-        flex-direction: column;
+      width: 100%;
     }
 
-    &__photo {
-        width: 50%;
+    img {
+      max-width: 80%;
+      max-height: fit-content;
+      object-fit: cover;
+      margin: 0 9rem;
 
-        @include respond(tab-land) {
-            width: 100%;
-        }
+      @include respond(big-desktop) {
+        margin: 0;
+        max-width: 100%;
+      }
+    }
+  }
 
+  &__text {
+    width: 37%;
+    position: absolute;
+    top: 5rem;
+    left: 50rem;
+    margin-left: 6rem;
 
-        img {
-            max-width: 80%;
-            max-height: fit-content;
-            object-fit: cover;
-            margin: 0 9rem;
+    h1 {
+      font-size: 30px;
 
-            @include respond(big-desktop) {
-                margin: 0;
-                max-width: 100%;
-            }
-        }
+      @include respond(big-desktop) {
+        font-size: 55px;
+      }
     }
 
-    &__text {
-        width: 37%;
-        position: absolute;
-        top: 5rem;
-        left: 50rem;
-        margin-left: 6rem;
+    p {
+      line-height: 1.3rem;
+      font-size: 15px;
 
-        p {
-            line-height: 1.3rem;
-        }
-
-        @media screen and (max-height: 1370px) {
-            left: 45rem;
-        }
-
-        @include respond(tab-land) {
-            position: relative;
-            left: 0;
-            margin: 0 auto;
-            width: 50%;
-            margin-bottom: 5rem;
-        }
+      @include respond(big-desktop) {
+        line-height: 2rem;
+        font-size: 30px;
+      }
     }
+
+    @media screen and (max-height: 1370px) {
+      left: 45rem;
+    }
+
+    @include respond(tab-land) {
+      position: relative;
+      left: 0;
+      margin: 0 auto;
+      width: 50%;
+    }
+
+    @include respond(big-desktop) {
+      position: relative;
+      left: 0;
+      margin: 0 auto;
+      width: 45%;
+      margin-bottom: 3rem;
+    }
+  }
 }
 
 .work {
-
-    @include respond(tab-port) {
-        padding: 10rem 0;
-    }
+  @include respond(tab-port) {
+    padding: 10rem 0;
+  }
 }
 
 .projects {
-    position: relative;
-    top: 62rem;
+  position: relative;
+  top: 62rem;
 
-    &__text {
-        text-align: center;
-        margin: 5rem 0;
-    }
+  &__text {
+    text-align: center;
+    margin: 5rem 0;
+  }
 }
 
 .skills {
-    position: relative;
-    top: 69rem;
-    width: 100%;
+  position: relative;
+  top: 69rem;
+  width: 100%;
 
-    &__text {
-        text-align: center;
-        margin-top: 8rem;
+  &__text {
+    text-align: center;
+    margin-top: 8rem;
+  }
+
+  &__items {
+    max-width: 54%;
+    margin: 4rem auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    img {
+      width: 3rem;
+      height: 3rem;
+      object-fit: contain;
+    }
+  }
+
+  &__item {
+    width: 8rem;
+    margin: 3rem 0;
+    text-align: center;
+    filter: grayscale(1);
+    cursor: pointer;
+
+    @include respond(phone) {
+      margin: 0;
+      width: 5rem;
     }
 
-    &__items {
-        max-width: 54%;
-        margin: 4rem auto;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-
-        img {
-            width: 3rem;
-            height: 3rem;
-            object-fit: contain;
-        }
+    @include respond(phones) {
+      width: 3rem;
     }
 
-    &__item {
-        width: 8rem;
-        margin: 3rem 0;
-        text-align: center;
-        filter: grayscale(1);
-        cursor: pointer;
-
-        i {
-            font-size: 3rem;
-        }
-
-        &:hover {
-            filter: saturate(1);
-        }
+    i {
+      font-size: 3rem;
     }
+
+    &:hover {
+      filter: saturate(1);
+    }
+  }
 }
 
 .marquee {
-    position: relative;
-    top: 70rem;
-    background: linear-gradient(-135deg, $color-light, $color-dark);
-    width: 100%;
-    box-sizing: border-box;
-    padding: 1em;
-    color: white;
-    font-weight: 200;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
+  position: relative;
+  top: 70rem;
+  background: linear-gradient(-135deg, $color-light, $color-dark);
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1em;
+  color: white;
+  font-weight: 200;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
 }
 
 .js-projects {
-    position: relative;
-    top: 69rem;
+  position: relative;
+  top: 69rem;
 
-    &__text {
-        text-align: center;
-        margin: 8rem;
-    }
+  &__text {
+    text-align: center;
+    margin: 8rem;
+  }
 
-    @include respond(tab-port) {
-        padding: 8rem 0;
-    }
+  @include respond(tab-port) {
+    padding: 8rem 0;
+  }
 }

@@ -18,7 +18,7 @@ html {
     font-size: 50%;
   }
 }
-@media (max-width: 112.5em) {
+@media (min-width: 112.5em) {
   html {
     font-size: 75%;
   }
@@ -510,6 +510,11 @@ body {
   position: relative;
   top: 45rem;
 }
+@media (min-width: 112.5em) {
+  .education__tree hr {
+    display: none;
+  }
+}
 .education__tree img {
   width: 4rem;
   height: 4rem;
@@ -530,6 +535,11 @@ body {
   position: absolute;
   right: 46%;
   transform: translateX(-46%);
+}
+@media (min-width: 112.5em) {
+  .education__img {
+    display: none;
+  }
 }
 .education .third {
   padding-top: 6rem;
@@ -611,7 +621,7 @@ body {
 }
 
 .nav {
-  width: 40%;
+  width: 50%;
   position: fixed;
   border-radius: 2rem;
   z-index: 10;
@@ -623,25 +633,40 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+@media (min-width: 112.5em) {
+  .nav {
+    width: 55%;
+    padding: 20px;
+  }
+}
 @media (max-width: 75em) {
   .nav {
     width: 55%;
+    padding: 15px;
   }
 }
 @media (max-width: 56.25em) {
   .nav {
     width: 60%;
+    padding: 15px;
   }
 }
 @media (max-width: 37.5em) {
   .nav {
     width: 65%;
+    padding: 14px;
+  }
+}
+@media (max-width: 18.5em) {
+  .nav {
+    width: 70%;
+    padding: 13px;
   }
 }
 .nav__left {
   width: 60%;
 }
-@media (max-width: 112.5em) {
+@media (min-width: 112.5em) {
   .nav__left {
     width: 65%;
   }
@@ -665,7 +690,7 @@ body {
   font-family: "Fira Code", monospace;
   font-size: 13px;
 }
-@media (max-width: 112.5em) {
+@media (min-width: 112.5em) {
   .nav__list li {
     padding: 0.8rem;
     font-size: 12px;
@@ -693,7 +718,7 @@ body {
   font-weight: 400;
   font-size: 14px;
 }
-@media (max-width: 112.5em) {
+@media (min-width: 112.5em) {
   .nav__link {
     font-size: 12px;
   }
@@ -715,7 +740,7 @@ body {
 .nav__right {
   width: 40%;
 }
-@media (max-width: 112.5em) {
+@media (min-width: 112.5em) {
   .nav__right {
     width: 35%;
   }
@@ -844,12 +869,6 @@ body {
     max-width: 30rem;
   }
 }
-@media (max-width: 37.5em) {
-  .banner__text {
-    top: 12rem;
-    max-width: 25rem;
-  }
-}
 .banner__text h3 {
   line-height: 1.3rem;
 }
@@ -879,7 +898,7 @@ body {
   object-fit: cover;
   margin: 0 9rem;
 }
-@media (max-width: 112.5em) {
+@media (min-width: 112.5em) {
   .about__photo img {
     margin: 0;
     max-width: 100%;
@@ -892,8 +911,23 @@ body {
   left: 50rem;
   margin-left: 6rem;
 }
+.about__text h1 {
+  font-size: 30px;
+}
+@media (min-width: 112.5em) {
+  .about__text h1 {
+    font-size: 55px;
+  }
+}
 .about__text p {
   line-height: 1.3rem;
+  font-size: 15px;
+}
+@media (min-width: 112.5em) {
+  .about__text p {
+    line-height: 2rem;
+    font-size: 30px;
+  }
 }
 @media screen and (max-height: 1370px) {
   .about__text {
@@ -906,7 +940,15 @@ body {
     left: 0;
     margin: 0 auto;
     width: 50%;
-    margin-bottom: 5rem;
+  }
+}
+@media (min-width: 112.5em) {
+  .about__text {
+    position: relative;
+    left: 0;
+    margin: 0 auto;
+    width: 45%;
+    margin-bottom: 3rem;
   }
 }
 
@@ -952,6 +994,17 @@ body {
   text-align: center;
   filter: grayscale(1);
   cursor: pointer;
+}
+@media (max-width: 37.5em) {
+  .skills__item {
+    margin: 0;
+    width: 5rem;
+  }
+}
+@media (max-width: 18.5em) {
+  .skills__item {
+    width: 3rem;
+  }
 }
 .skills__item i {
   font-size: 3rem;

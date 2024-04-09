@@ -7,11 +7,11 @@ var fourth = document.getElementsByClassName("fourth")[0];
 var fifth = document.getElementsByClassName("fifth")[0];
 
 window.addEventListener("scroll", () => {
-    nav.classList.toggle("sticky", window.scrollY > 0);
-    typeWriter.classList.toggle("animated", window.scrollY > 0);
-    tree.classList.toggle("leftitem", window.scrollY > 1000);
-    second.classList.toggle("rightitem", window.scrollY > 1300);
-    third.classList.toggle("leftitem", window.scrollY > 1700);
-    fourth.classList.toggle("rightitem", window.scrollY > 2000);
-    fifth.classList.toggle("leftitem", window.scrollY > 2300);
+  nav.classList.toggle("sticky", window.scrollY > 0);
+  typeWriter.classList.toggle("animated", window.scrollY > 0);
+  tree.classList.toggle("leftitem", window.scrollY > 800);
+  second.classList.toggle("rightitem", window.scrollY > 1000);
+  third.classList.toggle("leftitem", window.scrollY > 1500);
+  fourth.classList.toggle("rightitem", window.scrollY > 1800);
+  fifth.classList.toggle("leftitem", window.scrollY > 2100);
 });

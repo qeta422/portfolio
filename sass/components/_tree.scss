@@ -1,108 +1,107 @@
 .education {
-    position: relative;
-    top: 58rem;
-    
-    &__text {
-        text-align: center;
-        margin: 1rem;
+  position: relative;
+  top: 58rem;
+
+  &__text {
+    text-align: center;
+    margin: 1rem;
+  }
+
+  &__tree {
+    margin-top: 5rem;
+
+    hr {
+      transform: rotate(90deg);
+      position: relative;
+      top: 45rem;
+
+      @include respond(big-desktop) {
+        display: none;
+      }
     }
 
+    img {
+      width: 4rem;
+      height: 4rem;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid $color-light;
+      margin-bottom: 17rem;
+    }
+
+    &__item {
+      padding-bottom: 2rem;
+    }
+
+    .grid-text {
+      padding: 0 2rem;
+    }
+  }
+
+  &__img {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 46%;
+    transform: translateX(-46%);
+
+    @include respond(big-desktop) {
+      display: none;
+    }
+  }
+
+  .third {
+    padding-top: 6rem;
+  }
+
+  .fourth {
+    padding-top: 3.5rem;
+  }
+
+  .fifth {
+    padding-top: 4rem;
+  }
+
+  .leftitem {
+    .slide-left {
+      animation-name: moveInLeft;
+      animation-duration: 1s;
+    }
+  }
+
+  .rightitem {
+    .slide-right {
+      animation-name: moveInRight;
+      animation-duration: 1s;
+    }
+  }
+
+  @include respond(tab-land) {
     &__tree {
-        margin-top: 5rem;
+      margin: 5rem 13rem;
+      float: left;
 
+      hr {
+        display: none;
+      }
 
-        hr {
-            transform: rotate(90deg);
-            position: relative;
-            top: 45rem;
-        }
-    
-        img {
-            width: 4rem;
-            height: 4rem;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 4px solid $color-light;
-            margin-bottom: 17rem;
-    
-        }
+      img {
+        display: none;
+      }
 
-        &__item {
-            padding-bottom: 2rem;
-        }
-
-        .grid-text {
-            padding: 0 2rem;
-        }
+      .grid-text {
+        padding: 0 2rem;
+        float: right;
+      }
     }
 
     &__img {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        right: 46%;
-        transform: translateX(-46%);
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      right: 0;
+      left: 5px;
+      transform: translateX(0);
     }
-
-    .third {
-        padding-top: 6rem;
-    }
-
-    .fourth {
-        padding-top: 3.5rem;
-    }
-
-    .fifth {
-        padding-top: 4rem;
-    }
-
-    .leftitem {
-
-        .slide-left {
-            animation-name: moveInLeft;
-            animation-duration: 1s;
-        }
-    }
-
-    .rightitem {
-
-        .slide-right {
-            animation-name: moveInRight;
-            animation-duration: 1s;
-        }
-    }
-
-    @include respond(tab-land) {
-        
-    
-        &__tree {
-            margin: 5rem 13rem;
-            float: left;
-    
-    
-            hr {
-                display: none;
-            }
-        
-            img {
-                display: none;
-            }
-
-            .grid-text {
-                padding: 0 2rem;
-                float: right;
-            }
-            
-        }
-    
-        &__img {
-            display: flex;
-            flex-direction: column;
-            position: absolute;
-            right: 0;
-            left: 5px;
-            transform: translateX(0);
-        }
-    }
-
+  }
 }

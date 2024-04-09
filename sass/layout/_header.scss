@@ -1,137 +1,149 @@
 .header {
-    width: 100%;
-    transition: 0.6s;
+  width: 100%;
+  transition: 0.6s;
 
-    animation: topAnimation ease-in-out;
-    animation-duration: 1.7s;
+  animation: topAnimation ease-in-out;
+  animation-duration: 1.7s;
 }
 
 .sticky {
-    backdrop-filter: blur(30px);
-    box-shadow: 3px 3px 50px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(30px);
+  box-shadow: 3px 3px 50px rgba(0, 0, 0, 0.3);
 }
 
 .nav {
-    width: 40%;
-    position: fixed;
-    border-radius: 2rem;
-    z-index: 10;
-    transition: 0.6s;
-    display: flex;
-    left: 50%;
-    top: 2rem;
-    transform: translateX(-50%);
-    justify-content: space-between;
-    align-items: center;
+  width: 50%;
+  position: fixed;
+  border-radius: 2rem;
+  z-index: 10;
+  transition: 0.6s;
+  display: flex;
+  left: 50%;
+  top: 2rem;
+  transform: translateX(-50%);
+  justify-content: space-between;
+  align-items: center;
+
+  @include respond(big-desktop) {
+    width: 55%;
+    padding: 20px;
+  }
+
+  @include respond(tab-land) {
+    width: 55%;
+    padding: 15px;
+  }
+
+  @include respond(tab-port) {
+    width: 60%;
+    padding: 15px;
+  }
+
+  @include respond(phone) {
+    width: 65%;
+    padding: 14px;
+  }
+
+  @include respond(phones) {
+    width: 70%;
+    padding: 13px;
+  }
+
+  &__left {
+    width: 60%;
+
+    @include respond(big-desktop) {
+      width: 65%;
+    }
 
     @include respond(tab-land) {
-        width: 55%;
+      width: 70%;
     }
 
     @include respond(tab-port) {
-        width: 60%;
+      width: 75%;
+    }
+  }
+
+  &__list {
+    display: flex;
+
+    li {
+      padding: 1rem;
+      color: $color-primary;
+      font-family: $font-family-small;
+      font-size: 13px;
+
+      @include respond(big-desktop) {
+        padding: 0.8rem;
+        font-size: 12px;
+      }
+
+      @include respond(tab-land) {
+        padding: 0.7rem;
+        font-size: 10px;
+      }
+
+      @include respond(tab-port) {
+        padding: 0.5rem;
+        font-size: 9px;
+      }
     }
 
-    @include respond(phone) {
-        width: 65%;
+    li:hover {
+      color: $color-primary-light;
+      transition: 0.5s;
+    }
+  }
+
+  &__link {
+    color: $color-lighter;
+    font-family: $font-family-small;
+    font-weight: 400;
+    font-size: 14px;
+
+    @include respond(big-desktop) {
+      font-size: 12px;
     }
 
-    &__left {
-        width: 60%;
-
-        @include respond(big-desktop) {
-            width: 65%;
-        }
-
-        @include respond(tab-land) {
-            width: 70%;
-        }
-
-        @include respond(tab-port) {
-            width: 75%;
-        }
-        
+    @include respond(tab-land) {
+      font-size: 10px;
     }
 
-    &__list {
-        display: flex;
-
-        li {
-            padding: 1rem;
-            color: $color-primary;
-            font-family: $font-family-small;
-            font-size: 13px;
-
-            @include respond(big-desktop) {
-                padding: .8rem;
-                font-size: 12px;
-            }
-
-            @include respond(tab-land) {
-                padding: .7rem;
-                font-size: 10px;
-            }
-
-            @include respond(tab-port) {
-                padding: .5rem;
-                font-size: 9px;
-            }
-        }
-
-        li:hover {
-            color: $color-primary-light;
-            transition: .5s;
-        }
+    @include respond(tab-port) {
+      font-size: 9px;
     }
 
-    &__link {
-        color: $color-lighter;
-        font-family: $font-family-small;
-        font-weight: 400;
-        font-size: 14px;
+    &:hover {
+      color: $color-lighter2;
+      transition: 0.5s;
+    }
+  }
 
-        @include respond(big-desktop) {
-            font-size: 12px;
-        }
+  &__right {
+    width: 40%;
 
-        @include respond(tab-land) {
-            font-size: 10px;
-        }
-
-        @include respond(tab-port) {
-            font-size: 9px;
-        }
-
-        &:hover  {
-            color: $color-lighter2;
-            transition: .5s;
-        }
+    @include respond(big-desktop) {
+      width: 35%;
     }
 
-    &__right {
-        width: 40%;
-
-        @include respond(big-desktop) {
-            width: 35%;
-        }
-
-        @include respond(tab-land) {
-            width: 30%;
-        }
-
-        @include respond(tab-land) {
-            width: 25%;
-        }
+    @include respond(tab-land) {
+      width: 30%;
     }
 
-    &__btn {
-        float: right;
-        margin-right: 1rem;
-
-        &:hover {
-            background-color: $color-primary-dark;
-            border: none;
-            transition: 1s;
-        }
+    @include respond(tab-land) {
+      width: 25%;
     }
+  }
+
+  &__btn {
+    float: right;
+    margin-right: 1rem;
+
+    &:hover {
+      background-color: $color-primary-dark;
+      border: none;
+      transition: 1s;
+    }
+  }
 }
