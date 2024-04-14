@@ -27,46 +27,69 @@
       top: 13rem;
       left: 8rem;
       max-width: 30rem;
+      animation: none;
     }
 
     @include respond(phone) {
-      top: 14rem;
-      left: 10rem;
-      max-width: 45rem;
+      top: 10rem;
+      left: 3rem;
+      max-width: 20rem;
+      animation: none;
     }
 
     @include respond(phones) {
-      top: 14rem;
-      left: 10rem;
-      max-width: 45rem;
+      top: 9rem;
+      left: 2rem;
+      max-width: 20rem;
+      animation: none;
     }
 
     h1 {
-      font-size: 45px;
+      font-size: 38px;
+
+      @include respond(big-desktop) {
+        font-size: 45px;
+      }
+
+      @include respond(tab-land) {
+        font-size: 35px;
+      }
+
+      @include respond(tab-port) {
+        font-size: 30px;
+      }
+
+      @include respond(phone) {
+        font-size: 25px;
+      }
+
+      @include respond(phones) {
+        font-size: 20px;
+      }
     }
 
     h3 {
       line-height: 2.1rem;
-      font-size: 25px;
+      font-size: 18px;
 
       @include respond(big-desktop) {
-        line-height: 2.5rem;
-        font-size: 30px;
+        line-height: 2.1rem;
+        font-size: 20px;
       }
 
       @include respond(tab-land) {
-        line-height: 2.5rem;
-        font-size: 25px;
+        line-height: 1.9rem;
+        font-size: 15px;
       }
 
       @include respond(tab-port) {
-        line-height: 1.7rem;
-        font-size: 22px;
+        line-height: 1.1rem;
+        font-size: 12px;
       }
 
       @include respond(phone) {
-        line-height: 1.1rem;
-        font-size: 15px;
+        line-height: 1rem;
+        font-size: 7px;
       }
 
       @include respond(phones) {
@@ -87,6 +110,19 @@
 
   @include respond(tab-land) {
     flex-direction: column;
+    top: 47rem;
+  }
+
+  @include respond(tab-port) {
+    top: 40rem;
+  }
+
+  @include respond(phone) {
+    top: 32rem;
+  }
+
+  @include respond(phones) {
+    top: 30rem;
   }
 
   &__photo {
@@ -122,60 +158,60 @@
       position: relative;
       left: 0;
       margin: 5rem auto;
-      width: 60%;
+      width: 75%;
     }
 
     @include respond(tab-port) {
       position: relative;
       left: 0;
       margin: 5rem auto;
-      width: 70%;
+      width: 85%;
     }
 
     @include respond(phone) {
       position: relative;
       left: 0;
       margin: 5rem auto;
-      width: 80%;
+      width: 95%;
     }
 
     @include respond(phones) {
       position: relative;
       left: 0;
       margin: 5rem auto;
-      width: 90%;
+      width: 100%;
     }
 
     h1 {
       font-size: 30px;
 
       @include respond(big-desktop) {
-        font-size: 55px;
+        font-size: 40px;
       }
     }
 
     p {
-      line-height: 1.9rem;
-      font-size: 24px;
+      line-height: 1.5rem;
+      font-size: 20px;
 
       @include respond(big-desktop) {
-        line-height: 2rem;
-        font-size: 30px;
+        line-height: 1.5rem;
+        font-size: 23px;
       }
 
       @include respond(tab-land) {
-        line-height: 1.7rem;
-        font-size: 20px;
+        line-height: 1.3rem;
+        font-size: 15px;
       }
 
       @include respond(tab-port) {
-        line-height: 1.5rem;
-        font-size: 17px;
+        line-height: 1.1rem;
+        font-size: 12px;
       }
 
       @include respond(phone) {
-        line-height: 1.1rem;
-        font-size: 15px;
+        line-height: 1rem;
+        font-size: 10px;
       }
 
       @include respond(phones) {
@@ -186,15 +222,25 @@
   }
 }
 
-.work {
-  @include respond(tab-port) {
-    padding: 10rem 0;
-  }
-}
-
 .projects {
   position: relative;
   top: 62rem;
+
+  @include respond(tab-land) {
+    top: 60rem;
+  }
+
+  @include respond(tab-port) {
+    top: 45rem;
+  }
+
+  @include respond(phone) {
+    top: 30rem;
+  }
+
+  @include respond(phones) {
+    top: 20rem;
+  }
 
   &__text {
     text-align: center;
@@ -206,6 +252,22 @@
   position: relative;
   top: 69rem;
   width: 100%;
+
+  @include respond(tab-land) {
+    top: 65rem;
+  }
+
+  @include respond(tab-port) {
+    top: 46rem;
+  }
+
+  @include respond(phone) {
+    top: 30rem;
+  }
+
+  @include respond(phones) {
+    top: 30rem;
+  }
 
   &__text {
     text-align: center;
@@ -233,13 +295,19 @@
     filter: grayscale(1);
     cursor: pointer;
 
+    @include respond(tab-port) {
+      filter: none;
+    }
+
     @include respond(phone) {
       margin: 0;
       width: 5rem;
+      filter: none;
     }
 
     @include respond(phones) {
       width: 3rem;
+      filter: none;
     }
 
     i {
@@ -264,11 +332,39 @@
   display: flex;
   align-items: center;
   overflow: hidden;
+
+  @include respond(tab-land) {
+    top: 65rem;
+  }
+
+  @include respond(tab-port) {
+    top: 46rem;
+  }
+
+  @include respond(phone) {
+    top: 35rem;
+  }
+
+  @include respond(phones) {
+    top: 30rem;
+  }
 }
 
 .js-projects {
   position: relative;
   top: 69rem;
+
+  @include respond(tab-port) {
+    top: 39rem;
+  }
+
+  @include respond(phone) {
+    top: 30rem;
+  }
+
+  @include respond(phones) {
+    top: 30rem;
+  }
 
   &__text {
     text-align: center;

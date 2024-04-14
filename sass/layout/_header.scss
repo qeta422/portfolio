@@ -40,13 +40,13 @@
   }
 
   @include respond(phone) {
-    width: 65%;
-    padding: 14px;
+    width: 75%;
+    padding: 10px;
   }
 
   @include respond(phones) {
-    width: 70%;
-    padding: 13px;
+    width: 78%;
+    padding: 2px;
   }
 
   &__left {
@@ -90,13 +90,13 @@
       }
 
       @include respond(phone) {
-        width: 65%;
-        padding: 9px;
+        padding: 0.5rem;
+        font-size: 9px;
       }
 
       @include respond(phones) {
-        width: 70%;
-        padding: 7px;
+        padding: 0.3rem;
+        font-size: 2px;
       }
     }
 
@@ -125,11 +125,11 @@
     }
 
     @include respond(phone) {
-      padding: 7px;
+      font-size: 7px;
     }
 
     @include respond(phones) {
-      padding: 5px;
+      font-size: 3px;
     }
 
     &:hover {

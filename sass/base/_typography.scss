@@ -1,92 +1,94 @@
 .heading {
-    font-size: 3.5rem;
-    color: $color-lighter2;
-    font-family: $font-family-big;
-    font-weight: 700;
+  font-size: 3.5rem;
+  color: $color-lighter2;
+  font-family: $font-family-big;
+  font-weight: 700;
 
-    @include respond(tab-port) {
-        font-size: 1.5rem;
-    }
+  @include respond(tab-port) {
+    font-size: 1.5rem;
+  }
 
-    @include respond(phone) {
-        font-size: 1rem;
-    }
+  @include respond(phone) {
+    font-size: 1rem;
+  }
 }
 
 .heading-medium {
-    font-size: 2rem;
-    color: $color-lighter2;
-    font-family: $font-family-big;
-    font-weight: 700;
+  font-size: 2rem;
+  color: $color-lighter2;
+  font-family: $font-family-big;
+  font-weight: 700;
 
-    @include respond(tab-port) {
-        font-size: 1.5rem;
-    }
+  @include respond(tab-port) {
+    font-size: 1.5rem;
+  }
 
-    @include respond(phone) {
-        font-size: 1rem;  
-    }
+  @include respond(phone) {
+    font-size: 1rem;
+  }
 }
 
 .paragraph {
-    font-size: 1rem;
-    color: $color-primary;
-    font-family: $font-family-small;
-    font-weight: 400;
-    margin-bottom: 1rem;
+  font-size: 1rem;
+  color: $color-primary;
+  font-family: $font-family-small;
+  font-weight: 400;
+  margin-bottom: 1rem;
 
-    @include respond(phone) {
-        font-size: .9rem;  
-    }
+  @include respond(phone) {
+    font-size: 0.9rem;
+  }
 }
 
 .heading-small {
-    font-size: 1rem;
-    color: $color-lighter;
-    font-family: $font-family-small;
-    font-weight: 400;
-    margin: 1rem 0;
-    line-height: 1.5rem;
+  font-size: 1rem;
+  color: $color-lighter;
+  font-family: $font-family-small;
+  font-weight: 400;
+  margin: 1rem 0;
+  line-height: 1.5rem;
 
-    &__link {
-        &:hover {
-            color: $color-primary;
-        }
+  &__link {
+    &:hover {
+      color: $color-primary;
     }
+  }
 
-    @include respond(tab-port) {
-        font-size: .8rem;
-    }
+  @include respond(tab-port) {
+    font-size: 0.8rem;
+  }
 
-    @include respond(phone) {
-        font-size: .5rem;  
-    }
+  @include respond(phone) {
+    font-size: 0.5rem;
+  }
+
+  @include respond(phones) {
+    font-size: 0.5rem;
+  }
 }
 
 .heading-small-dark {
-    font-size: 1rem;
-    color: $color-light;
-    font-family: $font-family-small;
-    font-weight: 400;
-    margin: 1rem 0;
+  font-size: 1rem;
+  color: $color-light;
+  font-family: $font-family-small;
+  font-weight: 400;
+  margin: 1rem 0;
 
-    &__link {
-        &:hover {
-            color: $color-primary;
-        }
+  &__link {
+    &:hover {
+      color: $color-primary;
     }
+  }
 
-    @include respond(tab-port) {
-        font-size: .8rem;
-    }
+  @include respond(tab-port) {
+    font-size: 0.8rem;
+  }
 
-    @include respond(phone) {
-        font-size: .5rem;  
-    }
+  @include respond(phone) {
+    font-size: 0.5rem;
+  }
 
-    &__left {
-        float: right;
-    }
+  &__left {
+    float: right;
+  }
 }
-
-
