@@ -332,6 +332,7 @@
   display: flex;
   align-items: center;
   overflow: hidden;
+  cursor: pointer;
 
   @include respond(tab-land) {
     top: 65rem;
