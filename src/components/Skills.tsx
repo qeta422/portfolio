@@ -2,25 +2,33 @@ import React from 'react';
 import { Skill } from '../types';
 
 const skillsData: Skill[] = [
-  // First row - Modern Stack
-  { name: 'React', iconClass: 'fa-brands fa-react', color: '#61DAFB' },
-  { name: 'Next.js', iconClass: 'fa-solid fa-n', color: '#000000' },
+  // Top Priority - Modern Stack
+  { name: 'React.js', iconClass: 'fa-brands fa-react', color: '#61DAFB' },
   { name: 'TypeScript', iconClass: 'fa-solid fa-code', color: '#3178C6' },
-  { name: 'Tailwind', iconClass: 'fa-solid fa-wind', color: '#06B6D4' },
+  { name: 'Next.js', iconClass: 'fa-solid fa-n', color: '#000000' },
+  { name: 'Tailwind CSS', iconClass: 'fa-solid fa-wind', color: '#06B6D4' },
   
-  // Second row - Core Skills
-  { name: 'JavaScript', iconClass: 'fa-brands fa-js', color: '#FFD43B' },
-  { name: 'Git', iconClass: 'fa-brands fa-git-alt', color: '#e15a2d' },
-  { name: 'REST API', iconClass: 'fa-solid fa-server', color: '#FF6B6B' },
-  { name: 'Firebase', iconClass: 'fa-solid fa-fire', color: '#FFA116' },
-  
-  // Third row - Additional Tech
-  { name: 'Sass', iconClass: 'fa-brands fa-sass', color: '#d779c6' },
+  // Programming Languages
+  { name: 'JavaScript ES6+', iconClass: 'fa-brands fa-js', color: '#FFD43B' },
   { name: 'jQuery', image: '/img/jquery-icon.png' },
-  { name: 'Bootstrap', iconClass: 'fa-brands fa-bootstrap', color: '#9128fb' },
-  { name: 'Figma', iconClass: 'fa-brands fa-figma', color: '#F24E1E' },
   
-  // Fourth row - Design Tools
+  // Styling Frameworks
+  { name: 'Material-UI', iconClass: 'fa-solid fa-m', color: '#0081CB' },
+  { name: 'Sass/SCSS', iconClass: 'fa-brands fa-sass', color: '#d779c6' },
+  { name: 'Bootstrap', iconClass: 'fa-brands fa-bootstrap', color: '#9128fb' },
+  
+  // Development Tools
+  { name: 'Git/GitHub', iconClass: 'fa-brands fa-git-alt', color: '#e15a2d' },
+  { name: 'VS Code', image: '/img/Visual_Studio-icon.png' },
+  { name: 'npm/yarn', iconClass: 'fa-brands fa-npm', color: '#CB3837' },
+  
+  // Backend & APIs
+  { name: 'Firebase', iconClass: 'fa-solid fa-fire', color: '#FFA116' },
+  { name: 'RESTful APIs', iconClass: 'fa-solid fa-server', color: '#FF6B6B' },
+  { name: 'Netlify', iconClass: 'fa-solid fa-cloud', color: '#00C7B7' },
+  
+  // Design Tools
+  { name: 'Figma', iconClass: 'fa-brands fa-figma', color: '#F24E1E' },
   { name: 'Photoshop', image: '/img/Photoshop-icon.png' },
   { name: 'Illustrator', image: '/img/illustrator-icon.png' },
 ];
@@ -46,7 +54,7 @@ const Skills: React.FC = () => {
 const SkillCard: React.FC<{ skill: Skill & { color?: string }; index: number }> = ({ skill, index }) => {
   return (
     <div 
-      className="skill-card bg-dark/80 p-6 rounded-lg shadow-xl flex flex-col items-center justify-center gap-4 hover:bg-dark/60 hover:scale-105 transition-all duration-300 group"
+      className="skill-card bg-dark/80 p-6 rounded-lg shadow-xl flex flex-col items-center justify-center gap-4 hover:bg-dark/60 hover:scale-105 transition-all duration-300 group h-full"
       style={{ animationDelay: `${index * 0.1}s` }}
     >
       {skill.iconClass ? (

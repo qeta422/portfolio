@@ -10,11 +10,12 @@ const Banner: React.FC = () => {
           Qeta Fetviashvili
         </h1>
         <h2 className="text-4xl md:text-6xl font-bold text-secondary mb-8">
-          I am a Front-End Developer
+          I am a Junior React Developer
         </h2>
         <p className="text-xl text-secondary max-w-2xl mb-12">
-          I enjoy creating simple and beautiful appearance as well as coding solutions to
-          the problems that reflect real-life challenges.
+          I transform complex data challenges into elegant, user-friendly solutions. 
+          With expertise in React, TypeScript, and modern frontend technologies, 
+          I craft responsive interfaces that make powerful AI-driven analytics accessible to everyone.
         </p>
         <Link
           to="skills"

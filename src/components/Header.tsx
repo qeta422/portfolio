@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-scroll';
+import resumePDF from '../assets/CV.pdf';
 
 interface HeaderProps {
   isScrolled: boolean;
@@ -27,12 +28,20 @@ const Header: React.FC<HeaderProps> = ({ isScrolled }) => {
                 <span className="text-primary">01.</span> About
               </Link>
               <Link
+                to="experience"
+                smooth={true}
+                duration={500}
+                className="text-light hover:text-primary transition-colors cursor-pointer"
+              >
+                <span className="text-primary">02.</span> Experience
+              </Link>
+              <Link
                 to="education"
                 smooth={true}
                 duration={500}
                 className="text-light hover:text-primary transition-colors cursor-pointer"
               >
-                <span className="text-primary">02.</span> Education
+                <span className="text-primary">03.</span> Education
               </Link>
               <Link
                 to="projects"
@@ -40,11 +49,11 @@ const Header: React.FC<HeaderProps> = ({ isScrolled }) => {
                 duration={500}
                 className="text-light hover:text-primary transition-colors cursor-pointer"
               >
-                <span className="text-primary">03.</span> Projects
+                <span className="text-primary">04.</span> Projects
               </Link>
             </div>
             <a 
-              href="/documents/CV.pdf" 
+              href={resumePDF}
               target="_blank"
               rel="noopener noreferrer"
               className="border border-primary text-primary px-4 py-2 rounded-full hover:bg-primary/10 transition-all"

@@ -14,9 +14,9 @@ const educationData: EducationItem[] = [
   {
     id: 2,
     institution: 'BTU',
-    field: 'Information Technologies',
-    period: 'Aug 2020 - Present',
-    description: 'After completing My first IT Academy course, my decision was getting to know tech fundamentals. Throughout my bachelor\'s degree, to this day I\'ve learnt various aspects of the profession and formed confidence in which path I wanted to follow.',
+    field: 'Bachelor in Information Technologies',
+    period: 'Sep 2020 - Oct 2024',
+    description: 'Completed comprehensive computer science curriculum covering algorithms, data structures, web technologies, and software engineering principles. Applied theoretical knowledge through practical projects and internships. Throughout my bachelor\'s degree, I\'ve learnt various aspects of the profession and formed confidence in which path I wanted to follow.',
     position: 'right'
   },
   {
@@ -24,23 +24,23 @@ const educationData: EducationItem[] = [
     institution: 'IT Academy Step',
     field: 'Front-End Web Development',
     period: 'Dec 2022 - Aug 2023',
-    description: 'Deepened the knowledge of Html, Css, Scss and JQuery, got to know Javascript basics with ES6 standard, mastered the usage of Bootstrap and learned how to build responsive/mobile customized web applications. Learned how to work with GitHub and build small projects using mentioned above.',
+    description: 'Comprehensive training in modern frontend development including SCSS, jQuery, Bootstrap, and JavaScript fundamentals. Gained hands-on experience with responsive web design and modern development workflows. Built small projects using GitHub for version control.',
     position: 'left'
   },
   {
     id: 4,
     institution: 'Digital Institute',
-    field: 'JavaScript course',
+    field: 'JavaScript Programming',
     period: 'Sep 2023 - Nov 2023',
-    description: 'Had further look into JavaScript programming language. Creating simple projects using objects, arrays and functions. Making different kinds of registration/authorization forms, burger/dropdowns, sliders, filtrations and animations using basic knowledge of JavaScript.',
+    description: 'Intensive JavaScript course covering ES6+ features, asynchronous programming, DOM manipulation, and modern development practices. Developed interactive web applications including form validations, dynamic content loading, and API integrations.',
     position: 'right'
   },
   {
     id: 5,
     institution: 'Udemy',
-    field: 'courses',
+    field: 'JavaScript/React Development',
     period: 'Dec 2023 - Present',
-    description: 'Broadening the grasp and creating a career path I don\'t plan to stop, hence I constantly take numerous courses with different topics and step by step fill the knowledge void on the road to be successful.',
+    description: 'Continuously expanding expertise in React ecosystem including Hooks, Context API, and TypeScript. Building personal projects with focus on component architecture, state management, and performance optimization. Completed advanced React patterns and TypeScript courses.',
     position: 'left'
   }
 ];
@@ -58,8 +58,8 @@ const Education: React.FC = () => {
           {/* Timeline line */}
           <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-primary/30 hidden md:block"></div>
           
-          {educationData.map((item, index) => (
-            <EducationCard key={item.id} item={item} index={index} />
+          {educationData.map((item) => (
+            <EducationCard key={item.id} item={item} />
           ))}
         </div>
       </div>
@@ -67,7 +67,7 @@ const Education: React.FC = () => {
   );
 };
 
-const EducationCard: React.FC<{ item: EducationItem; index: number }> = ({ item, index }) => {
+const EducationCard: React.FC<{ item: EducationItem }> = ({ item }) => {
   const { ref, isIntersecting } = useIntersectionObserver({ threshold: 0.3 });
 
   return (

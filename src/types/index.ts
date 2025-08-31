@@ -22,6 +22,7 @@ export interface Skill {
   icon?: string;
   iconClass?: string;
   image?: string;
+  color?: string;
 }
 
 export interface JSProject {
