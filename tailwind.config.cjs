@@ -4,6 +4,18 @@ module.exports = {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  safelist: [
+    'text-[#61DAFB]',
+    'text-[#3178C6]',
+    'text-[#06B6D4]',
+    'text-[#FFD43B]',
+    'text-[#e15a2d]',
+    'text-[#FF6B6B]',
+    'text-[#FFA116]',
+    'text-[#d779c6]',
+    'text-[#9128fb]',
+    'text-[#F24E1E]',
+  ],
   theme: {
     extend: {
       colors: {

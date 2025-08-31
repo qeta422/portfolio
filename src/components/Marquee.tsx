@@ -18,7 +18,7 @@ const Marquee: React.FC = () => {
   const duplicatedProjects = [...marqueeProjects, ...marqueeProjects];
 
   return (
-    <section className="marquee overflow-hidden py-12 bg-dark/30">
+    <section className="marquee overflow-hidden py-16 bg-dark/30">
       <div className="marquee-container flex">
         <div className="marquee-content flex animate-marquee">
           {duplicatedProjects.map((project, index) => (

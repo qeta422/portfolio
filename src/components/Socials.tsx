@@ -14,21 +14,21 @@ const Socials: React.FC = () => {
     },
     { 
       icon: 'fa-regular fa-envelope', 
-      link: 'https://mail.google.com/mail/?view=cm&fs=1&to=ketevan.petviashvili.1@btu.edu.ge',
+      link: 'mailto:qetafetviashvili123@gmail.com',
       label: 'Email'
     }
   ];
 
   return (
-    <section className="socials py-12 px-6 bg-dark/50">
+    <section className="socials py-8 px-6 bg-dark/50">
       <div className="container mx-auto max-w-6xl">
         <div className="flex justify-center items-center gap-8 mb-8">
           {socials.map((social, index) => (
             <a
               key={index}
               href={social.link}
-              target="_blank"
-              rel="noopener noreferrer"
+              target={social.link.startsWith('mailto') ? undefined : '_blank'}
+              rel={social.link.startsWith('mailto') ? undefined : 'noopener noreferrer'}
               aria-label={social.label}
               className="text-3xl text-secondary hover:text-primary transition-colors transform hover:scale-110"
             >

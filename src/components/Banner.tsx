@@ -3,7 +3,7 @@ import { Link } from 'react-scroll';
 
 const Banner: React.FC = () => {
   return (
-    <section className="banner min-h-screen flex items-center justify-center px-6">
+    <section className="banner min-h-screen flex items-center justify-center px-6 py-24">
       <div className="max-w-4xl animate-fadeInUp">
         <p className="text-primary font-fira mb-4">Hi! my name is</p>
         <h1 className="text-5xl md:text-7xl font-bold text-light mb-4">
@@ -20,7 +20,7 @@ const Banner: React.FC = () => {
           to="skills"
           smooth={true}
           duration={500}
-          className="inline-block border border-primary text-primary px-8 py-4 rounded hover:bg-primary/10 transition-all cursor-pointer"
+          className="inline-block border border-primary text-primary px-8 py-4 rounded-full hover:bg-primary/10 transition-all cursor-pointer"
         >
           Technical Skills
         </Link>

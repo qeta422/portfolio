@@ -1,11 +1,12 @@
 import React from 'react';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
+import Typewriter from './Typewriter';
 
 const About: React.FC = () => {
   const { ref, isIntersecting } = useIntersectionObserver({ threshold: 0.3 });
 
   return (
-    <section id="about" className="about min-h-screen flex items-center py-20 px-6">
+    <section id="about" className="about flex items-center py-24 px-6">
       <div className="container mx-auto max-w-6xl">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className={`transition-all duration-1000 ${
@@ -24,9 +25,7 @@ const About: React.FC = () => {
             }`}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-light mb-8">
-              <span className={isIntersecting ? 'inline-block animate-pulse' : ''}>
-                About me
-              </span>
+              <Typewriter text="About me" isVisible={isIntersecting} delay={150} />
             </h2>
             <p className="text-secondary text-lg leading-relaxed">
               My experience includes working with HTML, CSS/SASS and JavaScript to create

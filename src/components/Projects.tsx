@@ -33,13 +33,13 @@ const projectsData: Project[] = [
 
 const Projects: React.FC = () => {
   return (
-    <section id="projects" className="projects min-h-screen py-20 px-6">
+    <section id="projects" className="projects py-24 px-6">
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-16">
+        <div className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl font-bold text-light">My projects</h2>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-6">
           {projectsData.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
@@ -51,16 +51,16 @@ const Projects: React.FC = () => {
 
 const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
   return (
-    <div className="flip-card h-96 w-full">
+    <div className="flip-card h-[520px] w-full">
       <div className="flip-card-inner relative w-full h-full transition-transform duration-700 transform-style-preserve-3d hover:rotate-y-180">
         {/* Front Side */}
         <div className="flip-card-front absolute w-full h-full backface-hidden rounded-lg overflow-hidden shadow-xl">
-          <div className={`h-2/5 ${project.imageClass} bg-cover bg-center`}></div>
-          <div className="p-6 bg-dark/90">
+          <div className={`h-[45%] ${project.imageClass} bg-cover bg-center`}></div>
+          <div className="p-6 bg-dark/90 h-[55%] flex flex-col">
             <h3 className={`text-2xl font-bold mb-4 bg-gradient-to-r ${project.colorClass} bg-clip-text text-transparent`}>
               {project.title}
             </h3>
-            <p className="text-secondary text-sm">{project.description}</p>
+            <p className="text-secondary text-sm leading-relaxed">{project.description}</p>
           </div>
         </div>
         
