@@ -32,8 +32,10 @@ module.exports = {
         'fadeInUp': 'fadeInUp 1s ease-out',
         'slideInLeft': 'slideInLeft 1s ease-out',
         'slideInRight': 'slideInRight 1s ease-out',
-        'marquee': 'marquee 30s linear infinite',
+        'marquee': 'marquee 20s linear infinite',
         'pulse': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'blink': 'blink 1s infinite',
+        'flip': 'flip 0.7s',
       },
       keyframes: {
         fadeInUp: {
@@ -73,9 +75,71 @@ module.exports = {
           '100%': {
             transform: 'translateX(-50%)'
           }
+        },
+        blink: {
+          '0%, 50%': {
+            opacity: '1'
+          },
+          '51%, 100%': {
+            opacity: '0'
+          }
+        },
+        flip: {
+          '0%': {
+            transform: 'rotateY(0deg)'
+          },
+          '100%': {
+            transform: 'rotateY(180deg)'
+          }
         }
+      },
+      transformStyle: {
+        'preserve-3d': 'preserve-3d',
+      },
+      backfaceVisibility: {
+        'hidden': 'hidden',
+      },
+      perspective: {
+        '1000': '1000px',
+      },
+      rotate: {
+        'y-180': 'rotateY(180deg)',
+      },
+      grayscale: {
+        DEFAULT: '100%',
       }
     },
   },
-  plugins: [],
+  plugins: [
+    function({ addUtilities }) {
+      const newUtilities = {
+        '.transform-style-preserve-3d': {
+          transformStyle: 'preserve-3d',
+        },
+        '.backface-hidden': {
+          backfaceVisibility: 'hidden',
+          '-webkit-backface-visibility': 'hidden',
+        },
+        '.perspective-1000': {
+          perspective: '1000px',
+        },
+        '.rotate-y-180': {
+          transform: 'rotateY(180deg)',
+        },
+        '.grayscale-hover': {
+          filter: 'grayscale(100%)',
+          transition: 'filter 0.3s ease-in-out',
+          '&:hover': {
+            filter: 'grayscale(0%)',
+          },
+        },
+        '.pause-animation-on-hover': {
+          '&:hover .animate-marquee': {
+            animationPlayState: 'paused',
+          },
+        },
+      }
+      addUtilities(newUtilities)
+    }
+  ],
 }

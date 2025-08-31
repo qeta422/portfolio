@@ -19,15 +19,15 @@ const Marquee: React.FC = () => {
 
   return (
     <section className="marquee overflow-hidden py-16 bg-dark/30">
-      <div className="marquee-container flex">
-        <div className="marquee-content flex animate-marquee">
+      <div className="pause-animation-on-hover flex">
+        <div className="flex animate-marquee">
           {duplicatedProjects.map((project, index) => (
             <a
               key={index}
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="marquee-item flex-shrink-0 mx-4 hover:scale-105 transition-transform"
+              className="flex-shrink-0 mx-4 hover:scale-105 transition-transform"
             >
               <div className="w-64 h-40 rounded-lg overflow-hidden shadow-lg">
                 <img 

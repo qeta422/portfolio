@@ -48,13 +48,12 @@ const Projects: React.FC = () => {
     </section>
   );
 };
-
 const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
   return (
-    <div className="flip-card h-[520px] w-full">
-      <div className="flip-card-inner relative w-full h-full transition-transform duration-700 transform-style-preserve-3d hover:rotate-y-180">
+    <div className="h-[520px] w-full perspective-1000 group">
+      <div className="relative w-full h-full transition-transform duration-700 transform-style-preserve-3d group-hover:rotate-y-180">
         {/* Front Side */}
-        <div className="flip-card-front absolute w-full h-full backface-hidden rounded-lg overflow-hidden shadow-xl">
+        <div className="absolute w-full h-full backface-hidden rounded-lg overflow-hidden shadow-xl">
           <div className={`h-[45%] ${project.imageClass} bg-cover bg-center`}></div>
           <div className="p-6 bg-dark/90 h-[55%] flex flex-col">
             <h3 className={`text-2xl font-bold mb-4 bg-gradient-to-r ${project.colorClass} bg-clip-text text-transparent`}>
@@ -65,7 +64,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
         </div>
         
         {/* Back Side */}
-        <div className={`flip-card-back absolute w-full h-full backface-hidden rotate-y-180 rounded-lg overflow-hidden shadow-xl bg-gradient-to-br ${project.colorClass} flex items-center justify-center`}>
+        <div className={`absolute w-full h-full backface-hidden rotate-y-180 rounded-lg overflow-hidden shadow-xl bg-gradient-to-br ${project.colorClass} flex items-center justify-center`}>
           <div className="text-center p-6">
             <h3 className="text-2xl font-bold text-white mb-6">{project.subtitle}</h3>
             <a 

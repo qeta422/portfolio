@@ -50,31 +50,23 @@ const Skills: React.FC = () => {
     </section>
   );
 };
-
 const SkillCard: React.FC<{ skill: Skill & { color?: string }; index: number }> = ({ skill, index }) => {
+  const [isHovered, setIsHovered] = React.useState(false);
+  
   return (
     <div 
-      className="skill-card bg-dark/80 p-6 rounded-lg shadow-xl flex flex-col items-center justify-center gap-4 hover:bg-dark/60 hover:scale-105 transition-all duration-300 group h-full"
+      className="animate-fadeInUp bg-dark/80 p-6 rounded-lg shadow-xl flex flex-col items-center justify-center gap-4 hover:bg-dark/60 hover:scale-105 transition-all duration-300 group h-full"
       style={{ animationDelay: `${index * 0.1}s` }}
     >
       {skill.iconClass ? (
         <div className="relative group">
           <i 
-            className={`${skill.iconClass} text-5xl text-secondary/50 transition-all duration-300 group-hover:text-opacity-100`}
-            style={{
-              filter: 'grayscale(1)',
-              transition: 'all 0.3s ease'
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.filter = 'grayscale(0)';
-              if (skill.color) {
-                e.currentTarget.style.color = skill.color;
-              }
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.filter = 'grayscale(1)';
-              e.currentTarget.style.color = '';
-            }}
+            className={`${skill.iconClass} text-5xl transition-all duration-300 ${
+              isHovered ? '' : 'grayscale opacity-50'
+            }`}
+            style={{ color: isHovered && skill.color ? skill.color : '' }}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
           ></i>
         </div>
       ) : (
@@ -82,19 +74,11 @@ const SkillCard: React.FC<{ skill: Skill & { color?: string }; index: number }> 
           <img 
             src={skill.image} 
             alt={skill.name} 
-            className="w-full h-full object-contain transition-all duration-300"
-            style={{
-              filter: 'grayscale(1)',
-              opacity: '0.5'
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.filter = 'grayscale(0)';
-              e.currentTarget.style.opacity = '1';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.filter = 'grayscale(1)';
-              e.currentTarget.style.opacity = '0.5';
-            }}
+            className={`w-full h-full object-contain transition-all duration-300 ${
+              isHovered ? '' : 'grayscale opacity-50'
+            }`}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
           />
         </div>
       )}
